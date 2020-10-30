@@ -1,0 +1,204 @@
+/**
+ * Footer
+ **/
+@use "sass:list";
+
+@include respond-above(xxl) {
+  footer {
+    .container {
+      max-width: 1380px;
+    }
+  }
+}
+
+@include respond-between(xl, xxl) {
+  footer {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+@include respond-between(lg, xl) {
+  footer {
+    .container {
+      max-width: 1000px;
+    }
+  }
+}
+
+#footerBrand {
+  padding: 75px 0;
+  font-family: "Lato", sans-serif;
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+#footerTeamLogo {
+  background-image: url("../assets/img/iGEMBITSGoa_logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 175px;
+  background-size: contain;
+  margin: 0 30px 35px 10px;
+  display: inline-block;
+}
+
+#BITSLogo {
+  background-image: url("../assets/img/BITS_Pilani-Logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  background-size: contain;
+  margin: 0 0 35px 30px;
+}
+
+@include respond-below(xs) {
+  #footerTeamLogo,
+  #BITSLogo {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+#footerIcons {
+  width: 100%;
+  height: 25px;
+  margin: 0;
+
+  a {
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 0 25px;
+    transition: all 0.2s;
+
+    filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(2%)
+      hue-rotate(36deg) brightness(94%) contrast(88%);
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(0%) saturate(0%)
+        hue-rotate(208deg) brightness(94%) contrast(87%);
+    }
+  }
+
+  a.gmail {
+    background-image: url(../assets/icons/envelope-open-text-solid.svg);
+  }
+
+  a.insta {
+    background-image: url(../assets/icons/instagram-brands.svg);
+  }
+
+  a.twitter {
+    background-image: url(../assets/icons/twitter-brands.svg);
+  }
+}
+
+#footerNav {
+  width: 100%;
+  font-family: "Lato";
+
+  .row {
+    margin-right: 0;
+  }
+
+  .container {
+    padding: 75px 0 75px 50px;
+  }
+
+  a.footer-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    font-weight: 400;
+    margin: 0;
+    a {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@include respond-below(sm) {
+  #footerNav {
+    .container {
+      text-align: center;
+      padding-left: 0;
+
+      a.footer-heading {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@include respond-below(xs) {
+  #footerBrand {
+    padding: 80px 0 20px 0;
+  }
+
+  #footerNav {
+    .container {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .col {
+      line-height: 0.75rem 0;
+    }
+
+    ul {
+      margin-top: 10px;
+      display: none;
+    }
+  }
+}
+
+@each $category, $id in $section-pages-map {
+  body.theme-#{$category} {
+
+    #footerNav {
+      background-color: nth($page-accents, $id);
+
+      .footer-heading {
+        color: nth($footer-text, $id);
+      }
+
+      li a {
+        color: nth($footer-text, $id);
+      }
+    }
+    &.dark {
+      #footerNav {
+        background-color: nth($page-accents-dark, $id);
+      }
+    }
+  }
+}
+
+body.dark {
+  #footerTeamLogo {
+    background-image: url("../assets/img/iGEMBITSGoa_logo_dark.svg");
+  }
+
+  p {
+    color: white;
+  }
+}

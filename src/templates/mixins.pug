@@ -1,0 +1,133 @@
+- urlPrefix = "/"
+
+mixin buttonLeft(buttonTitle)
+  if buttonTitle == "Home"
+    - var href = urlPrefix
+  else
+    - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
+
+  if buttonTitle.includes("Model/")
+    - buttonTitle = buttonTitle.substr(6)
+  else if buttonTitle.includes("Experiments/")
+    - buttonTitle = buttonTitle.substr(12)
+  
+  a.button.prev(href=href)
+    span.button-background
+      span.circle(aria-hidden=true)
+        span.icon.arrow
+    span.button-text= buttonTitle 
+
+mixin buttonRight(buttonTitle)
+
+  if buttonTitle == "Home"
+    - var href = urlPrefix
+  else
+    - var href = urlPrefix + buttonTitle.replace(/ /g,'_')
+
+  if buttonTitle.includes("Model/")
+    - buttonTitle = buttonTitle.substr(6)
+  else if buttonTitle.includes("Experiments/")
+    - buttonTitle = buttonTitle.substr(12)
+  
+  a.button.next(href=href)
+    span.button-background
+      span.circle(aria-hidden=true)
+        span.icon.arrow
+    span.button-text= buttonTitle 
+
+mixin image(n, url, caption, width)
+  .image
+    if width
+      img(src=url alt=caption style="width: " + width + "%")
+    else
+      img(src=url alt=caption)
+    p= "Figure " + n + ": " + caption
+
+mixin ximage(url, caption, width)
+  .image
+    if width
+      img(src=url alt=caption style="width: " + width + "%")
+    else
+      img(src=url alt=caption)
+    p= caption
+
+mixin imgCitation(name, number)
+  p.text-center
+    a(href="#citation" + number)= name
+
+mixin citation_article(citation, count)
+  // year_published is present in the authors field
+  - scholar = "https://scholar.google.com/scholar?q=" + citation.title
+  li(id= 'citation' + counter)
+    p.author= citation.authors
+    cite= citation.title
+    p
+      span.journalTitle= citation.journal
+      | 
+      span.journalInfo= citation.numbers
+    if citation.doi
+      a.in-text(href=citation.doi target="_blank" rel="noopener") CrossRef
+    a.in-text(href=scholar target="_blank" rel="noopener") Google Scholar
+    a.in-text(href="#intext" + count) Back to text
+
+mixin citation_webpage(citation, count)
+  li(id= 'citation' + count)
+    // date of publication comes with authors/details 
+    // depending on presence of authors
+    // as per APA specifications
+    p.author= citation.authors
+    cite= citation.title
+    p
+      span.details= citation.details
+      a.in-text(href=citation.url target="_blank" rel="noopener")= citation.url
+    a.in-text(href="#intext" + count) Back to text
+
+mixin citation_book(citation, count)
+  li(id= 'citation' + counter)
+    p.author= citation.authors + " " + citation.year_published
+    cite= citation.title
+    p
+      span.details= citation.publisher
+    if citation.Google_Books_URL != ""
+      a.in-text(href=citation.Google_Books_URL target="_blank" rel="noopener") Google Books
+    a.in-text(href="#intext" + counter) Back to text    
+
+mixin landing_card(caption, name, image)
+  .col-sm-6.col-lg-4
+    a(href= urlPrefix + caption + "/" + name.replace(" ", "_"))
+      section.card
+        .card-background
+          img(src=require("../assets/img/" + image)['default'])
+        .card-info
+          h2
+            span= caption
+            = name
+
+mixin pdf(url, description)
+  p
+    | To download this document, click 
+    a(href=url) here
+    | .
+  embed(src=url type="application/pdf" title=description)
+
+mixin arrow(from, to, color, x1, y1, x2, y2, label, label_x, label_y)
+  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2 data-label-offset-x=label_x data-label-offset-y=label_y)
+    svg(height=100 width=100)
+      defs
+        marker(id="arrow_" + from + "_" + to markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto")
+          polygon(points="0 0, 6 3.5, 0 7" style='fill: ' + color + ';')
+      line.arrow(x1=0 y1=0 x2=87 y2=87 marker-end="url(#" + "arrow_" + from + "_" + to + ")" stroke=color)
+    if label
+      p.label= label
+
+mixin bi-arrow(from, to, color, x1, y1, x2, y2, label)
+  .arrow-container(data-from=from data-to=to data-offset-x1=x1 data-offset-x2=x2 data-offset-y1=y1 data-offset-y2=y2 data-label-offset-x=label_x data-label-offset-y=label_y)
+    svg(height=100 width=100)
+      defs
+        marker#startarrow(markerWidth="6" markerHeight="7" refX="6" refY="3.5" orient="auto")
+          polygon(points="6 0, 6 7, 0 3.5" fill=color)
+        marker#endarrow(markerWidth="6" markerHeight="7" refX="0" refY="3.5" orient="auto" markerUnits="strokeWidth")
+          polygon(points="0 0, 6 3.5, 0 7" fill=color)
+      line.arrow(x1=0 y1=0 x2=87 y2=87 marker-end="url(#endarrow)" marker-start="url(#startarrow)" stroke=color)
+    if label
+      p.label= label
