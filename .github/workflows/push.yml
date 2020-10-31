@@ -68,13 +68,16 @@ jobs:
         run: |
           npm install
           npm run test
-          pip install -r requirements.txt
+          python3 -m pip install -r requirements.txt
 
       - name: Preprocess
         run: npm run prestart
 
       - name: Build
         run: npm run build
+
+      - name: Postprocess
+        run: python3 utils/postprocess.py
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
