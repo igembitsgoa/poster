@@ -1,12 +1,11 @@
 const path = require("path");
 var HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
   mode: "production",
   entry: {
-    index: "./src/index.js",
+    index: "./src/production.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -19,24 +18,29 @@ module.exports = {
       template: "./src/index.pug",
       chunks: ["index"],
     }),
-    new ExtractCssChunks({
-      filename: "css/[name].css",
-    }),
     new CleanWebpackPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.pug$/,
-        use: ["pug-loader"],
+        use: [
+          {
+            loader: "pug-loader",
+            options: {
+              pretty: true,
+            }
+          },
+        ]
       },
       {
         test: /\.scss$/i,
         use: [
           {
-            loader: ExtractCssChunks.loader,
+            loader: 'style-loader',
             options: {
-              publicPath: "../",
+              insert: 'head',
+              injectType: 'singletonStyleTag',
             },
           },
           {

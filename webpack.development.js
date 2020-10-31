@@ -1,6 +1,5 @@
 const path = require("path");
 var HTMLWebpackPlugin = require("html-webpack-plugin");
-const { merge } = require("webpack-merge");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
