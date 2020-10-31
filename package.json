@@ -15,7 +15,7 @@
     "postprocess": "python3 utils/postprocess.py",
     "build:webpack": "webpack --config webpack.production.js",
     "build:all": "npm-run-all prestart build",
-    "build": "npm-run-all build:webpack postprocess"
+    "build": "npm-run-all build:webpack"
   },
   "repository": {
     "type": "git",
