@@ -1,12 +1,2 @@
-2020-10-31 20:19:14,361 : INFO : iGEM_login : Successfully logged in as ballaneypranav.
-2020-10-31 20:19:14,371 : INFO : iGEM_URL : ../index.bundle.js was changed to https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript in Poster/index.html.
-2020-10-31 20:19:14,935 : INFO : iGEM_upload_page : Uploaded to https://2020.igem.org/wiki/index.php?title=Team:BITSPilani-Goa_India/Poster&action=edit.
-2020-10-31 20:19:15,171 : DEBUG : iGEM_upload_page : Couldn't find the form at https://2020.igem.org/wiki/index.php?title=Template:BITSPilani-Goa_India/index-bundleJS&action=edit. Has the page changed?
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/igem_wikisync/browser.py", line 154, in iGEM_upload_page
-    browser.select_form('form')
-  File "/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/mechanicalsoup/stateful_browser.py", line 207, in select_form
-    raise LinkNotFoundError()
-mechanicalsoup.utils.LinkNotFoundError
-2020-10-31 20:19:15,171 : ERROR : iGEM_upload_page : Couldn't find the form at https://2020.igem.org/wiki/index.php?title=Template:BITSPilani-Goa_India/index-bundleJS&action=edit. Has the page changed?
-2020-10-31 20:19:15,171 : ERROR : build_and_upload : Could not upload index.bundle.js. Skipping.
+2020-10-31 20:24:04,399 : INFO : iGEM_login : Successfully logged in as ballaneypranav.
+2020-10-31 20:24:05,019 : INFO : iGEM_upload_page : Uploaded to https://2020.igem.org/wiki/index.php?title=Team:BITSPilani-Goa_India/Poster&action=edit.
