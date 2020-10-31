@@ -18,6 +18,7 @@ jobs:
         run: |
           npm install
           npm run test
+          pip install -r requirements.txt
 
       - name: Github Fix
         run: sh utils/github.io_fix.sh
@@ -64,6 +65,7 @@ jobs:
         run: |
           npm install
           npm run test
+          pip install -r requirements.txt
 
       - name: Preprocess
         run: npm run prestart
