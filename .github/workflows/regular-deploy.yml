@@ -1,4 +1,4 @@
-# name: Deploy to iGEM every 2 days
+name: Don't Deploy to iGEM every 2 days
 
 # on:
 #   schedule:
