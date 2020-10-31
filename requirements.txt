@@ -1,3 +1,4 @@
 html5lib
+bs4
 requests
 pyyaml
