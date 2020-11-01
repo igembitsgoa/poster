@@ -85,7 +85,7 @@ jobs:
           python-version: 3.7
 
       - name: iGEM WikiSync
-        uses: igembitsgoa/wikisync-action@v1.1-a0
+        uses: igembitsgoa/wikisync-action@v1.1-a1
         with:
           team: 'BITSPilani-Goa_India'
           source: 'dist'
