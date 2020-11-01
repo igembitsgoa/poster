@@ -22,5 +22,4 @@ if (os.path.isfile('dist/index.bundle.js')):
     os.remove('dist/index.bundle.js')
 
 with open('dist/Poster/index.html', 'wb') as file:
-    file.write(b'{{ Poster }}\n\n')
     file.write(soup.prettify('utf-8'))

@@ -85,11 +85,12 @@ jobs:
           python-version: 3.7
 
       - name: iGEM WikiSync
-        uses: igembitsgoa/wikisync-action@v0.2
+        uses: igembitsgoa/wikisync-action@v1.1-a0
         with:
           team: 'BITSPilani-Goa_India'
           source: 'dist'
           build: 'igem'
+          poster: true
         env:
           IGEM_USERNAME: ${{ secrets.IGEM_USERNAME }}
           IGEM_PASSWORD: ${{ secrets.IGEM_PASSWORD }}
