@@ -3,7 +3,7 @@ css: {}
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: bf8bb8aff7f7b82fd093e25652e80c9d
+    md5: b529edd80e19bb3e8887ae02ec3d18ec
 js:
   index.bundle.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/index-bundleJS?action=raw&ctype=text/javascript
