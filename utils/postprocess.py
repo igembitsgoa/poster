@@ -21,11 +21,20 @@ if (os.path.isfile(filename)):
 
     # embed JS in HTML
     body_tag = soup.find('body')
-    span_tag = soup.new_tag('span')
     script_tag = soup.new_tag('script')
-    script_tag.string = script_file.replace('&', '\&')
-    span_tag.append(script_tag)
-    body_tag.append(span_tag)
+    script_tag.attrs['id'] = "main_script"
+    body_tag.append(script_tag)
+
+    # write more JS to change &amp; to & in above JS
+    # because iGEM replaces all & to &amp; even in JS
+    script_tag = soup.new_tag('script')
+    script_tag.string = """
+        var script = document.querySelector("#main_script").innerHTML;
+        script = script.replace("&amp;", "&");
+        document.querySelector("#main_script").innerHTML = script;
+
+    """
+    body_tag.append(script_tag)
 
 
     # delete JS file
