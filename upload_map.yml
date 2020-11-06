@@ -31,9 +31,57 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/c/ce/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
     md5: b8ee546acd6cc0c49f42ad3d48ef244f
     upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
+  assets/img/Education--Abhigyaan-1.png:
+    link_URL: https://2020.igem.org/wiki/images/9/9e/T--BITSPilani-Goa_India--Poster_img--Education--Abhigyaan-1.png
+    md5: 938ac14de10a1c7e748a74770926667c
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Education--Abhigyaan-1.png
+  assets/img/Education--HumansOfiGEM.png:
+    link_URL: https://2020.igem.org/wiki/images/b/ba/T--BITSPilani-Goa_India--Poster_img--Education--HumansOfiGEM.png
+    md5: 8b64f09ddf8d2a6f2122db3610d0bb47
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Education--HumansOfiGEM.png
+  assets/img/Education--InnerWheel.png:
+    link_URL: https://2020.igem.org/wiki/images/9/9a/T--BITSPilani-Goa_India--Poster_img--Education--InnerWheel.png
+    md5: 6893198c0578a9e29104eab73ae862da
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Education--InnerWheel.png
+  assets/img/Education--iGEMPhrases.png:
+    link_URL: https://2020.igem.org/wiki/images/2/22/T--BITSPilani-Goa_India--Poster_img--Education--iGEMPhrases.png
+    md5: 3b831efab03439a5e2a8d3385ddadcb1
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Education--iGEMPhrases.png
+  assets/img/Entrepreneurship--PieChart.png:
+    link_URL: https://2020.igem.org/wiki/images/0/05/T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--PieChart.png
+    md5: b1e7d670dc0058d49085849b1356d3a6
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--PieChart.png
+  assets/img/Entrepreneurship--ProfitvsArea.png:
+    link_URL: https://2020.igem.org/wiki/images/6/66/T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--ProfitvsArea.png
+    md5: 3eb639fb01a443be4699b5fb713c5a27
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--ProfitvsArea.png
+  assets/img/Entrepreneurship--ProfitvsRecovery.png:
+    link_URL: https://2020.igem.org/wiki/images/c/c9/T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--ProfitvsRecovery.png
+    md5: 9492b0e472249023e30b05031043e69a
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Entrepreneurship--ProfitvsRecovery.png
+  assets/img/Implementation--BFD.png:
+    link_URL: https://2020.igem.org/wiki/images/9/9b/T--BITSPilani-Goa_India--Poster_img--Implementation--BFD.png
+    md5: a1c742d73a96d23662f8f14d9dc90021
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Implementation--BFD.png
+  assets/img/Implementation--PFD.png:
+    link_URL: https://2020.igem.org/wiki/images/6/60/T--BITSPilani-Goa_India--Poster_img--Implementation--PFD.png
+    md5: 850a27ee0ad4f415d2fa734f13e14b76
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Implementation--PFD.png
+  assets/img/Implementation--injection.jpg:
+    link_URL: https://2020.igem.org/wiki/images/7/7e/T--BITSPilani-Goa_India--Poster_img--Implementation--injection.jpg
+    md5: 87c2fe9eb1809d0feb992fa3b6c4d266
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Implementation--injection.jpg
+  assets/img/Title--SugarGain_logo.png:
+    link_URL: https://2020.igem.org/wiki/images/2/20/T--BITSPilani-Goa_India--Poster_img--Title--SugarGain_logo.png
+    md5: 67c1d60778f00d92ca4ed6a02ebb1059
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Title--SugarGain_logo.png
+  assets/img/logo.jpg:
+    link_URL: https://2020.igem.org/wiki/images/d/df/T--BITSPilani-Goa_India--Poster_img--logo.jpg
+    md5: d47d3629a83090c33e94c961e03a03d2
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--logo.jpg
 css: {}
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 96062063ab56946ddfc5d93ee2e823b5
+    md5: 09ecf7e2cf329116f8e1e51a63f318dc
 js: {}
