@@ -10,33 +10,90 @@ html
               .info
                 .title
                   #title_title
-                    h1 SugarGain
+                    img.w-80(src=require('./assets/img/Title--SugarGain_logo.png')['default'])
                 .text
                   #title_content
-                    p You should list all authors and their affiliations here. You can also add the project&apos;s abstract.
+                    p Shruti Sridhar, Gourav Saha, Pranav Ballaney, Yogen Borkar, Ameya Thete, Saransh Gokhale, Sharanya Shastri, Arya Agarwal, Naman Choudhary, Suhas Badadal, Ithihas Madala, Shrilaxmi Patil, Sumit Biswas, Malabika Biswas
+                    p Birla Institute of Technology and Science, Pilani - K K Birla Goa Campus, India
+
+                    h3 Abstract
+                    p Sugarcane faces the issue of post-harvest sucrose deterioration. This loss is caused by the activity of an enzyme called invertase. Post harvest, invertase cleaves sucrose which reduces sugar retrieval rates by up to 10.25%. We wanted to devise a solution that initiated grassroots-level changes for farmers. The farmer would administer our novel polymer-based inoculant, which would release our bacteria into the stem of the sugarcane, by employing an injector mechanism. Once inside, our genetic circuit inside the bacterial E.coli chassis is designed to exhibit anti-invertase activity, regulated by the amount of fructose inside the sugarcane in a continuous and controlled manner, through a biosensor mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. We have also kept in mind the significance of biosafety and designed a robust three-tier failsafe mechanism.
           .row
             #inspiration_block.section.full
               // 1200 x 200 pixels
               img(src='https://dummyimage.com/1200x200/000/fff&text=Inspiration')
               .info
-                .title  Introduction 
-                .text  Introduce your project and your team&apos;s goals.
+                .title
+                  #inspiration_title
+                    h1 Inspiration and Motivation 
+                .text
+                  #inspiration_content
+                    p India is still primarily an agrarian economy, with the sector contributing to almost 15.4 percent of the net Gross Domestic Product (The World Factbook: India, n.d.) and around 58.6 percent of the population is engaged in some form of agricultural activity. Agriculture is therefore, not only a means of income for a majority of the Indian population, but also a form of cultural identity for farmers across the nation. 
+                    p Sugarcane is also one of the most widely-grown cash-crop in the country and is cultivated on around 50 million hectares of land.  Furthermore, sugarcane is also a major crop in countries such as Brazil, Mauritius, Mexico, Cuba and Indonesia. 
+                    p We therefore chose to work on a problem plaguing both sugarcane farmers and the sugar industry: the problem of post-harvest sucrose deterioration.  The motivation to bring about change for sugarcane farmers  gave birth to our project SugarGain - where we aim to reduce post harvest losses and increase sugar recovery rates. 
+                    p SugarGain is our way of making the world a sweeter place (quite literally!).
+
           .row
             #design_block.section.full
               img(src='https://dummyimage.com/1200x300/000/fff&text=Design')
               //- img(src='https://2020.igem.org/wiki/images/f/f3/T--Example--Poster_Inspiration.png')
               .info
-                .title  Inspiration 
+                .title 
+                  #design_title
+                    h1 Project Design
                 .text
-                  | What inspired your team? What motivated you to work on this particular project?
+                  #design_content
+                    h2 pFruB-Cra Construct
+                    p The pFruB-Cra construct has been designed to express anti-invertase according to the levels of fructose in the sugarcane stem. In the absence of fructose, the FruR transcription factor represses the pFruB promoter which is in control of anti invertase expression.
+                    p Once there is fructose in the system, it is capable of binding to FruR (In the form of Fructose-1-Phosphate) and reducing FruR’s affinity for pFruB. This way, anti invertase production is increased.
+
+                    h2 Atmosphere Regulated Kill Switch
+                    p The Killswitch construct is an important part of our project since our product is closely associated with a commonly consumed item like sugar. We constructed the killswitch by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. In hypoxic environment (evidently, inside the sugarcane stem), the FNR promoter remains active and facilitates the production of ccdA antitoxin. CcdB is constitutively expressed in any condition. The simultaneous expression of ccdA as well as ccdB leads to the formation of a degradation complex. This way, the bacteria survive inside the sugarcane stem.
+                    p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
+
           .row
             #modelling_block.section.third
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Modelling')
               .info
-                .title  Problem 
+                .title
+                  #modelling_title
+                    h1 Modelling
                 .text
-                  | What is the problem your team is working to solve? How does it affect the world?
+                  #modelling_content
+                    p We have designed six models that cover various aspects of SugarGain, they are: 
+
+                    ol
+                      li A model to describe our FruR-Cra system, along with molecular modelling and docking studies;
+                      li 
+                        | An 
+                        em in silico 
+                        | simulation of the kill switch;
+                      li A model to determine the composition and optimum viscosity of our novel polymer inoculant with biosafety considerations;
+                      li A virtual screening model to study invertase-anti-invertase interactions;
+                      li An auxotrophy model as part of our three tier biosafety mechanism; and 
+                      li A model to predict the growth of bacteria in the sugarcane matrix
+
+                    p A few important ones have been highlighted below.
+
+                    h2 Growth Model
+
+                    p growth model helped us prove the fact was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
+
+                    h2 Virtual Screening
+
+                    p The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
+
+                    h2 pFruB-Cra Construct
+
+                    p Our model is the first-of-its-kind as we could not find any other mathematical model of the construct in literature. Teams in the future can now use this model in their projects and build upon it even further. 
+
+                    h2 
+                      em In silico
+                      |  Simulation of the Kill Switch
+
+                    p The kill switch model involved an in silico simulation of the kill switch construct. We determined the response time using the model, and we found using a perturbative sensitivity approach that this can be reduced using techniques like mutagenesis
+
             #engineering_block.section.third
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Engineering')
@@ -46,8 +103,14 @@ html
             #safety_block.section.third
               img(src='https://dummyimage.com/400x350/000/fff&text=Safety')
               .info
-                .title  Engineering
-                .text  Here you can explain the engineering process behind your project. 
+                .title 
+                  #safety_title
+                    h1 Safety
+                .text 
+                  #safety_content
+                    p Since our product, SugarGain, will be closely associated with sugar and sugarcane pb, we wanted to enforce robust measures to ensure biosafety. We came up with a three-tier biosafety mechanism.
+                    p As the first layer of biosafety, we wanted to render the bacteria auxotrophic to the sugarcane environment. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we planned to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to. The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). The third failsafe lies in the processing of sugarcane juice itself. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which should kill the bacteria.
+
           .row
             #human_practices_block.section.third
               // 400 x 200 pixels
@@ -60,21 +123,235 @@ html
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Implementation')
               .info
-                .title Idea 
-                .text  How are you going to solve the problem? Where did the idea come from? 
+                .title
+                  #implementation_title
+                    h1 Proposed Implementation
+                .text 
+                  #implementation_content
+                    h2 Delivery Mechanism
+                    p The delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer could choose when to use the product. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system.
+
+                    img.w-50(src = require('./assets/img/Implementation--injection.jpg')['default'])
+
+                    h2 Formulation of the Inoculant
+                    p The ingredients chosen for the final formulation were designed such that any remnants would be removed during the sugar manufacturing process (for which we have designed experiments for lab scale validation) and have minimal toxicity. This also gives the inoculant a long shelf life too.
+
+                    table
+                      caption#table1optimalconcentrationofeachcomponentintheinoculant Table 1: Optimal concentration of each component in the inoculant
+                      thead
+                        tr
+                          th Component
+                          th Optimised Concentration (w/w)
+                      tbody
+                        tr
+                          td Culture Broth (LB)
+                          td 95
+                        tr
+                          td Triton X 100
+                          td 3.1
+                        tr
+                          td Carboxymethyl cellulose
+                          td 0.1
+                        tr
+                          td Bentonite
+                          td 1.4
+                        tr
+                          td Sorbic Acid
+                          td 0.2
+                        tr
+                          td Potassium Sorbate
+                          td 0.2
+
+
+                    h2 Industrial Scale-Up
+                    p We tried to scale up our inoculant to an industrial product. As a starting point in process development. These are the processes and operations that we identified. 
+
+                    img.w-70(src = require('./assets/img/Implementation--BFD.png')['default'])
+
+                    br
+                    br
+                    p Based on these, three primary processes we drew up the process flow diagram.
+
+                    img(src = require('./assets/img/Implementation--PFD.png')['default'])
+
+                    table
+                      thead
+                        tr
+                          th Unit/Stream
+                          th Component
+                          th Unit/Stream
+                          th Component
+                      tbody
+                        tr
+                          td S1
+                          td Fresh Nutrient Media
+                          td S5
+                          td Concentrated Retentate
+                        tr
+                          td B1
+                          td Media Reservoir
+                          td S6
+                          td Permeate Nutrient Media
+                        tr
+                          td S2
+                          td Nutrient Media to Mixer
+                          td S7
+                          td Inoculant Mixture (See above table)
+                        tr
+                          td B2
+                          td Mixer
+                          td B5
+                          td Inoculant Storage
+                        tr
+                          td S3
+                          td Media to Bioreactor
+                          td S8
+                          td Inoculant Mixture to Hopper
+                        tr
+                          td B3
+                          td Bioreactor
+                          td B6
+                          td Hopper
+                        tr
+                          td S4
+                          td Fermented Cells with Media
+                          td S9
+                          td Packaging Outlet
+                        tr
+                          td B4
+                          td Crossflow Filter
+                          td
+                          td
+
             #entrepreneurship_block.section.third
-              img(src='https://dummyimage.com/400x350/000/fff&text=Entrpreneurship')
+              img(src='https://dummyimage.com/400x350/000/fff&text=Entrepreneurship')
               .info
-                .title  Engineering
-                .text  Here you can explain the engineering process behind your project. 
+                .title 
+                  #entrepreneurship_title 
+                    h1 Entrepreneurship
+                .text
+                  #entrepreneurship_content
+                    p We aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
+                    p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs shown in, and using the following pie chart. The proportions of costs to the total costs were calculated using Shuler & Kargi (2002). Using this, we calculate the total ‘other costs’ to be ₹25,000,000.
+                    img(src = require('./assets/img/Entrepreneurship--PieChart.png')['default'])
+                    p We calculated the price per kg for the inoculant. This price would be decreased in the future as we plan to carry out media formulation studies and come up with a cheaper, industrial and more suited inoculant for our solution.
+                    table
+                      caption#table1manufacturingcostsassociatedwithourproduct Table 1: Manufacturing costs associated with our product
+                      thead
+                        tr
+                          th Ingredient
+                          th Price of one industrial lot (INR)
+                          th Mass needed for 75,000 kg of Inoculant
+                          th Mass of one lot (kg)
+                          th Lots required
+                          th Total Material Cost (INR)
+                      tbody
+                        tr
+                          td Luria Bertrani
+                          td &#x20B9;10,000
+                          td 1800
+                          td 2
+                          td 900
+                          td &#x20B9;9,000,000
+                        tr
+                          td Water
+                          td &#x20B9;120
+                          td 70,000
+                          td 1,000
+                          td 70
+                          td &#x20B9;8,400
+                        tr
+                          td Triton X 100
+                          td &#x20B9;2,000
+                          td 2250
+                          td 0.5
+                          td 4500
+                          td &#x20B9;9,000,000
+                        tr
+                          td CMC
+                          td &#x20B9;5,000
+                          td 150
+                          td 25
+                          td 6
+                          td &#x20B9;30,000
+                        tr
+                          td Bentonite powder
+                          td &#x20B9;4,000
+                          td 1050
+                          td 1000
+                          td 1
+                          td &#x20B9;4,000
+                        tr
+                          td Sorbic Acid
+                          td &#x20B9;10,000
+                          td 150
+                          td 25
+                          td 6
+                          td &#x20B9;60,000
+                        tr
+                          td Potassium Sorbate
+                          td &#x20B9;8,000
+                          td 150
+                          td 25
+                          td 6
+                          td &#x20B9;48,000
+                        tr
+                          td
+                          td
+                          td
+                          td
+                          td
+                            strong Total cost
+                          td
+                            strong &#x20B9;18,150,400
+                        tr
+                          td
+                          td
+                          td
+                          td
+                          td
+                            strong Costs per kilogram
+                          td
+                            strong &#x20B9;242
+
+                    p We assumed the inoculant to increase the recovery rate by 4 percent points above the current rate of 12%, that is to 16%.
+
+                    img(src = require('./assets/img/Entrepreneurship--ProfitvsRecovery.png')['default'])
+
+                    p We can market our product in two ways.If the recovery rate is under 3.1%, it can be distributed as a government handout to promote more efficient production of sugar from sugarcane.
+                    p On the other hand, if the increase in recovery rate is above 3.1% - which is more likely according to our preliminary calculation - it is a ‘profitable’ venture and will provide an incentive for farmers to buy it themselves. 
+
+                    img(src = require('./assets/img/Entrepreneurship--ProfitvsArea.png')['default'])
+
+                    p Finally, economies of scale (reduction in costs as the scale of production increases) helps to increase profitability as we use the enzyme on a larger area of sugarcane plantations.
+
           .row
             #sci_comn_block.section.half
               // 600 x 200 pixels
               img(src='https://dummyimage.com/600x250/000/fff&text=Science_Communication')
               .info
-                .title  Problem 
+                .title
+                  #sci_comn_title
+                    h1 Science Communication
                 .text
-                  | What is the problem your team is working to solve? How does it affect the world?
+                  #sci_comn_content
+                    p Science communication and education both go hand-in-hand. Our team took a multifaceted approach towards scientific communication. Our goal being to make science accessible to everyone while still maintaining the highest integrity of research.
+                    h2 Outreach Initiatives
+                    img(src = require('./assets/img/Education--iGEMPhrases.png')['default'])
+                    p In collaboration with the iGEM team from the University of Rochester, we created a short video consisting of ten common ASL phrases used during the Jamboree.
+                    //- img(src = require('./assets/img/Entrepreneurship--ProfitvsRecovery.png')['default'])
+                    p We had the opportunity to conduct three webinars for over 600 high school students in the 11th and 12th grades belonging to STEM backgrounds of Deeksha Center for Learning, Bangalore
+                    img(src = require('./assets/img/Education--Abhigyaan-1.png')['default'])
+                    p We, along with Abhigyaan - a student run organization of BITS Goa, debunked some myths about COVID-19 and promoted safer and smarter ways to deal with the pandemic through posters and infographics. 
+                    img(src = require('./assets/img/Education--InnerWheel.png')['default'])
+                    p Along with iGEM Rochester we helped Inner Wheel Foundation with their education initiative
+                    img(src = require('./assets/img/Education--HumansOfiGEM.png')['default'])
+                    p We started Humans of iGEM to help teams connect by hearing each other's stories and sharing their own.
+                    img(src = require('./assets/img/logo.jpg')['default'])
+                    h4 Application of Engineering Principles to Life Sciences
+                    p Along with the Centre for Technical Education of our university, we were able to start a course on synthetic biology for undergraduate students.
+                    //- img(src = require('./assets/img/logo.jpg')['default'])
+                    p This year, we collaborated with IIT Madras and the University of Rochester to expand on the Language Project  initiative and translated iGEM Resources into various Indian regional languages. 
             #software_block.section.half
               // 600 x 200 pixels
               img(src='https://dummyimage.com/600x250/000/fff&text=Software')

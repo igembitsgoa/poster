@@ -15,14 +15,13 @@ $index-footer-links: #ffffff;
 
 // maps sections to IDs from the section arrays
 $section-pages-map: (
-  project: 1,
-  human-practices: 2,
-  parts: 3,
-  journal: 4,
-  team: 5,
-  contribution: 6,
-  other-areas: 2,
-  software: 7
+  title: 1,
+  inspiration: 2,
+  design: 3,
+  modelling: 4,
+  human_practices: 5,
+  software: 6,
+  acknowledgements: 7
 );
 
 $pink: #ea178c;
