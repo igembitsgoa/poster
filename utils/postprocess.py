@@ -23,7 +23,7 @@ if (os.path.isfile(filename)):
     body_tag = soup.find('body')
     span_tag = soup.new_tag('span')
     script_tag = soup.new_tag('script')
-    script_tag.string = script_file
+    script_tag.string = script_file.replace('&', '\&')
     span_tag.append(script_tag)
     body_tag.append(span_tag)
 
