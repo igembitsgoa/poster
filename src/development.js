@@ -1,6 +1,7 @@
 import "./css/index.scss";
 import "./js/main";
 
+
 $(document).ready(function () {
   //clear default settings
   $("#HQ_page").attr("id", "");
