@@ -1,7 +1,39 @@
-assets: {}
+assets:
+  assets/fonts/lato-v16-latin/lato-v16-latin-700.eot:
+    link_URL: https://2020.igem.org/wiki/images/4/41/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.eot
+    md5: f9203469f750b4284c62aa49f9496cb0
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.eot
+  assets/fonts/lato-v16-latin/lato-v16-latin-700.svg:
+    link_URL: https://2020.igem.org/wiki/images/8/8d/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.svg
+    md5: 596223f7bff9598c852e949e9d2b1aa0
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.svg
+  assets/fonts/lato-v16-latin/lato-v16-latin-700.ttf:
+    link_URL: https://2020.igem.org/wiki/images/5/52/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.ttf
+    md5: fe7d53e4cac8f5b946a9e25f004efc8c
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.ttf
+  assets/fonts/lato-v16-latin/lato-v16-latin-700.woff:
+    link_URL: https://2020.igem.org/wiki/images/1/12/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.woff
+    md5: 874b8e7bc7e8d1507b50f56bc6c9b536
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-700.woff
+  assets/fonts/lato-v16-latin/lato-v16-latin-regular.eot:
+    link_URL: https://2020.igem.org/wiki/images/5/59/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.eot
+    md5: 056a373d808ada4f12a2d6538e88823c
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.eot
+  assets/fonts/lato-v16-latin/lato-v16-latin-regular.svg:
+    link_URL: https://2020.igem.org/wiki/images/2/2e/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.svg
+    md5: 9087e4a6aceecc9b2914823044951a3a
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.svg
+  assets/fonts/lato-v16-latin/lato-v16-latin-regular.ttf:
+    link_URL: https://2020.igem.org/wiki/images/0/00/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.ttf
+    md5: d1d5e30aa8bb081cad8f409f27861672
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.ttf
+  assets/fonts/lato-v16-latin/lato-v16-latin-regular.woff:
+    link_URL: https://2020.igem.org/wiki/images/c/ce/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
+    md5: b8ee546acd6cc0c49f42ad3d48ef244f
+    upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
 css: {}
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: b529edd80e19bb3e8887ae02ec3d18ec
+    md5: 96062063ab56946ddfc5d93ee2e823b5
 js: {}
