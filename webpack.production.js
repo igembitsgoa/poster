@@ -1,6 +1,7 @@
 const path = require("path");
 var HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");    
 
 module.exports = {
   mode: "production",
@@ -17,6 +18,9 @@ module.exports = {
       filename: "Poster/index.html",
       template: "./src/index.pug",
       chunks: ["index"],
+    }),
+    new ExtractCssChunks({
+      filename: "css/[name].css",
     }),
     new CleanWebpackPlugin(),
   ],
@@ -37,10 +41,9 @@ module.exports = {
         test: /\.scss$/i,
         use: [
           {
-            loader: 'style-loader',
+            loader: ExtractCssChunks.loader,
             options: {
-              insert: 'head',
-              injectType: 'singletonStyleTag',
+              publicPath: "../",
             },
           },
           {
@@ -48,9 +51,6 @@ module.exports = {
           },
           {
             loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
           },
         ],
       },
