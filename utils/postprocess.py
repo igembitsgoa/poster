@@ -23,6 +23,7 @@ if (os.path.isfile(filename)):
     body_tag = soup.find('body')
     script_tag = soup.new_tag('script')
     script_tag.attrs['id'] = "main_script"
+    script_tag.string = script_file
     body_tag.append(script_tag)
 
     # write more JS to change &amp; to & in above JS
