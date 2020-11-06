@@ -30,6 +30,54 @@ table {
   width: 80% !important;
 }
 
+.custom-row {
+  display: flex;
+}
+
+.col {
+  flex: 50%;
+  margin: 0.5rem;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.col.image {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: unset;
+    display: block;
+    margin: auto;
+  }
+}
+
+.lightbox {
+  p {
+    display: none;
+  }
+}
+
+.featherlight-content {
+  .lightbox {
+    p {
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    img {
+      width: 100% !important;
+    }
+  }
+}
+
 // common rules for the title section
 #section_title {
   h1 {
@@ -44,30 +92,37 @@ table {
   p,
   ol,
   li {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   h2 {
     font-family: "Lato", sans-serif;
     font-size: 1.4rem;
     color: black;
     margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   table {
     border: 1px solid #dee2e6;
     width: 100%;
-    margin: 1.5rem 0 1rem 0;
+    margin: 1rem 0;
     color: #212529;
     border-collapse: collapse;
 
     td,
     th {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
 
     th {
-      padding: 0.75rem;
+      padding: 0.4rem;
       vertical-align: center;
       border: 1px solid #dee2e6;
     }
@@ -87,7 +142,7 @@ table {
 
         td {
           border: 1px solid #dee2e6;
-          padding: 0.75rem;
+          padding: 0.4rem;
         }
       }
     }
@@ -99,16 +154,12 @@ table {
       padding-bottom: 0.75rem;
       color: #6c757d;
       caption-side: bottom;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
   }
 }
 
 #title_title {
-  img {
-    margin: 3rem 0;
-    width: 80%;
-  }
 }
 
 #title_content {
@@ -166,10 +217,6 @@ table {
 }
 
 #implementation_content {
-  img {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 #sci_comn_title {

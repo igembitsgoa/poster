@@ -1,3 +1,5 @@
+include templates/mixins
+
 html
   body
     .page_wrapper
@@ -10,7 +12,9 @@ html
               .info
                 .title
                   #title_title
-                    img.w-80(src=require('./assets/img/Title--SugarGain_logo.png')['default'])
+                    - var imgpath = require('./assets/img/Title--SugarGain_logo.png')['default']
+                    +img("title-one", imgpath, "hello", 80, "3rem 0")
+
                 .text
                   #title_content
                     p Shruti Sridhar, Gourav Saha, Pranav Ballaney, Yogen Borkar, Ameya Thete, Saransh Gokhale, Sharanya Shastri, Arya Agarwal, Naman Choudhary, Suhas Badadal, Ithihas Madala, Shrilaxmi Patil, Sumit Biswas, Malabika Biswas
@@ -128,37 +132,38 @@ html
                     h1 Proposed Implementation
                 .text 
                   #implementation_content
-                    h2 Delivery Mechanism
-                    p The delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer could choose when to use the product. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system.
-
-                    img.w-50(src = require('./assets/img/Implementation--injection.jpg')['default'])
+                    .custom-row
+                      .col
+                        h2 Delivery Mechanism
+                        p The delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer could choose when to use the product. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system.
+                      .col.image
+                        img(src = require('./assets/img/Implementation--injection.jpg')['default'] style="margin-top: 0.5rem")
 
                     h2 Formulation of the Inoculant
                     p The ingredients chosen for the final formulation were designed such that any remnants would be removed during the sugar manufacturing process (for which we have designed experiments for lab scale validation) and have minimal toxicity. This also gives the inoculant a long shelf life too.
 
                     table
-                      caption#table1optimalconcentrationofeachcomponentintheinoculant Table 1: Optimal concentration of each component in the inoculant
+                      caption Table 1: Optimal concentration of each component in the inoculant
                       thead
                         tr
+                          th Component
+                          th Optimised Concentration (w/w)
                           th Component
                           th Optimised Concentration (w/w)
                       tbody
                         tr
                           td Culture Broth (LB)
                           td 95
-                        tr
-                          td Triton X 100
-                          td 3.1
-                        tr
-                          td Carboxymethyl cellulose
-                          td 0.1
-                        tr
                           td Bentonite
                           td 1.4
                         tr
+                          td Triton X 100
+                          td 3.1
                           td Sorbic Acid
                           td 0.2
                         tr
+                          td Carboxymethyl cellulose
+                          td 0.1
                           td Potassium Sorbate
                           td 0.2
 
@@ -169,59 +174,10 @@ html
                     img.w-70(src = require('./assets/img/Implementation--BFD.png')['default'])
 
                     br
-                    br
-                    p Based on these, three primary processes we drew up the process flow diagram.
+                    p Based on these three primary processes, we drew up the process flow diagram.
 
-                    img(src = require('./assets/img/Implementation--PFD.png')['default'])
-
-                    table
-                      thead
-                        tr
-                          th Unit/Stream
-                          th Component
-                          th Unit/Stream
-                          th Component
-                      tbody
-                        tr
-                          td S1
-                          td Fresh Nutrient Media
-                          td S5
-                          td Concentrated Retentate
-                        tr
-                          td B1
-                          td Media Reservoir
-                          td S6
-                          td Permeate Nutrient Media
-                        tr
-                          td S2
-                          td Nutrient Media to Mixer
-                          td S7
-                          td Inoculant Mixture (See above table)
-                        tr
-                          td B2
-                          td Mixer
-                          td B5
-                          td Inoculant Storage
-                        tr
-                          td S3
-                          td Media to Bioreactor
-                          td S8
-                          td Inoculant Mixture to Hopper
-                        tr
-                          td B3
-                          td Bioreactor
-                          td B6
-                          td Hopper
-                        tr
-                          td S4
-                          td Fermented Cells with Media
-                          td S9
-                          td Packaging Outlet
-                        tr
-                          td B4
-                          td Crossflow Filter
-                          td
-                          td
+                    - var imgpath = require('./assets/img/Implementation--PFD.png')['default']
+                    +img("implementation-PFD", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
 
             #entrepreneurship_block.section.third
               img(src='https://dummyimage.com/400x350/000/fff&text=Entrepreneurship')
@@ -232,97 +188,81 @@ html
                 .text
                   #entrepreneurship_content
                     p We aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
-                    p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs shown in, and using the following pie chart. The proportions of costs to the total costs were calculated using Shuler & Kargi (2002). Using this, we calculate the total ‘other costs’ to be ₹25,000,000.
-                    img(src = require('./assets/img/Entrepreneurship--PieChart.png')['default'])
+                    .custom-row
+                      .col
+                        p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs shown in, and using the following pie chart. The proportions of costs to the total costs were calculated using Shuler & Kargi (2002). Using this, we calculate the total ‘other costs’ to be ₹25,000,000.
+                      .col.image
+                        - var imgpath = require('./assets/img/Entrepreneurship--PieChart.png')['default']
+                        +img("entrepreneurship-pie", imgpath, "Distribution of other costs", 100)
+
                     p We calculated the price per kg for the inoculant. This price would be decreased in the future as we plan to carry out media formulation studies and come up with a cheaper, industrial and more suited inoculant for our solution.
                     table
                       caption#table1manufacturingcostsassociatedwithourproduct Table 1: Manufacturing costs associated with our product
                       thead
                         tr
                           th Ingredient
-                          th Price of one industrial lot (INR)
-                          th Mass needed for 75,000 kg of Inoculant
-                          th Mass of one lot (kg)
+                          th Price per lot (INR)
                           th Lots required
                           th Total Material Cost (INR)
                       tbody
                         tr
                           td Luria Bertrani
                           td &#x20B9;10,000
-                          td 1800
-                          td 2
                           td 900
                           td &#x20B9;9,000,000
                         tr
                           td Water
                           td &#x20B9;120
-                          td 70,000
-                          td 1,000
                           td 70
                           td &#x20B9;8,400
                         tr
                           td Triton X 100
                           td &#x20B9;2,000
-                          td 2250
-                          td 0.5
                           td 4500
                           td &#x20B9;9,000,000
                         tr
                           td CMC
                           td &#x20B9;5,000
-                          td 150
-                          td 25
                           td 6
                           td &#x20B9;30,000
                         tr
                           td Bentonite powder
                           td &#x20B9;4,000
-                          td 1050
-                          td 1000
                           td 1
                           td &#x20B9;4,000
                         tr
                           td Sorbic Acid
                           td &#x20B9;10,000
-                          td 150
-                          td 25
                           td 6
                           td &#x20B9;60,000
                         tr
                           td Potassium Sorbate
                           td &#x20B9;8,000
-                          td 150
-                          td 25
                           td 6
                           td &#x20B9;48,000
                         tr
-                          td
-                          td
-                          td
-                          td
-                          td
+                          td(colspan=3 style="text-align:right;")
                             strong Total cost
                           td
                             strong &#x20B9;18,150,400
                         tr
-                          td
-                          td
-                          td
-                          td
-                          td
+                          td(colspan=3 style="text-align:right;")
                             strong Costs per kilogram
                           td
                             strong &#x20B9;242
 
                     p We assumed the inoculant to increase the recovery rate by 4 percent points above the current rate of 12%, that is to 16%.
 
-                    img(src = require('./assets/img/Entrepreneurship--ProfitvsRecovery.png')['default'])
+                    .custom-row
+                      .col.image
+                        - var imgpath = require('./assets/img/Entrepreneurship--ProfitvsRecovery.png')['default']
+                        +img("entrepreneurship-profitvsrecovery", imgpath, "Room for Profit Margin in % vs. Recovery Rate Increase in units of 1%", 100)
+                      .col.image
+                        - var imgpath = require('./assets/img/Entrepreneurship--ProfitvsArea.png')['default']
+                        +img("entrepreneurship-profitvsarea", imgpath, "Room for Profit Margin in % vs. Area in Hectares", 100)
 
-                    p We can market our product in two ways.If the recovery rate is under 3.1%, it can be distributed as a government handout to promote more efficient production of sugar from sugarcane.
+                    p We can market our product in two ways. If the recovery rate is under 3.1%, it can be distributed as a government handout to promote more efficient production of sugar from sugarcane.
                     p On the other hand, if the increase in recovery rate is above 3.1% - which is more likely according to our preliminary calculation - it is a ‘profitable’ venture and will provide an incentive for farmers to buy it themselves. 
-
-                    img(src = require('./assets/img/Entrepreneurship--ProfitvsArea.png')['default'])
-
                     p Finally, economies of scale (reduction in costs as the scale of production increases) helps to increase profitability as we use the enzyme on a larger area of sugarcane plantations.
 
           .row
