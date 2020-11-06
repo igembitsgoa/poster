@@ -1,1 +1,1 @@
-import "./css/production.scss";
+import "./css/index.scss";
