@@ -9,21 +9,28 @@ with open('dist/Poster/index.html', 'r') as file:
 for item in soup.contents:
     if isinstance(item, Doctype):
         item.extract()
-    
+
 # if JS present
 filename = 'dist/index.bundle.js'
 if (os.path.isfile(filename)):
     with open(filename, 'r') as file:
         script_file = file.read()
 
+    # delete script tag
+    soup.find('script').decompose()
+
     # embed JS in HTML
-    script_tag = soup.find('script')
+    body_tag = soup.find('body')
+    span_tag = soup.new_tag('span')
+    script_tag = soup.new_tag('script')
     script_tag.string = script_file
-    del script_tag.attrs['src']
+    span_tag.append(script_tag)
+    body_tag.append(span_tag)
+
 
     # delete JS file
     os.remove(filename)
-    
+
 # if CSS present
 filename = "dist/css/index.css"
 if (os.path.isfile('dist/css/index.css')):
