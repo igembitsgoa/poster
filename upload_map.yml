@@ -65,7 +65,7 @@ assets:
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Implementation--BFD.png
   assets/img/Implementation--PFD.png:
     link_URL: https://2020.igem.org/wiki/images/6/60/T--BITSPilani-Goa_India--Poster_img--Implementation--PFD.png
-    md5: 850a27ee0ad4f415d2fa734f13e14b76
+    md5: 6cb2d322250e587f996094d95a6c3776
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Implementation--PFD.png
   assets/img/Implementation--injection.jpg:
     link_URL: https://2020.igem.org/wiki/images/7/7e/T--BITSPilani-Goa_India--Poster_img--Implementation--injection.jpg
@@ -83,5 +83,5 @@ css: {}
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 09ecf7e2cf329116f8e1e51a63f318dc
+    md5: 03239ae1c7d084bbb4bc6afb0d823338
 js: {}
