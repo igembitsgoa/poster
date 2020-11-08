@@ -49,10 +49,17 @@
     }
   }
 }
+
+a.imgcaption{
+  text-decoration: none;
+}
+
 .lightbox {
   display: block;
   p {
-    display: none;
+      text-align: center;
+      color: grey;
+      margin-top: 0.4rem;
   }
 }
 
