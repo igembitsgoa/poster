@@ -9,7 +9,7 @@ module.exports = {
     index: "./src/production.js",
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "Poster.js",
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "none", // avoid eval statements
@@ -20,7 +20,7 @@ module.exports = {
       chunks: ["index"],
     }),
     new ExtractCssChunks({
-      filename: "css/[name].css",
+      filename: "Poster/[name].css",
     }),
     new CleanWebpackPlugin(),
   ],
