@@ -8,7 +8,7 @@ html
           .row
             #title_block.section.full
               // 1200 x 200 pixels
-              img(src='https://dummyimage.com/1200x200/000/fff&text=SugarGain')
+              img(src=require('./assets/img/Poster--Title_2.svg')['default'])
               .info
                 .title
                   #title_title
@@ -38,26 +38,38 @@ html
 
           .row
             #design_block.section.full
-              img(src='https://dummyimage.com/1200x300/000/fff&text=Design')
-              //- img(src='https://2020.igem.org/wiki/images/f/f3/T--Example--Poster_Inspiration.png')
+              img(src=require('./assets/img/Poster--Design.svg')['default'])
               .info
                 .title 
                   #design_title
                     h1 Project Design
                 .text
                   #design_content
-                    h2 pFruB-Cra Construct
-                    p The pFruB-Cra construct has been designed to express anti-invertase according to the levels of fructose in the sugarcane stem. In the absence of fructose, the FruR transcription factor represses the pFruB promoter which is in control of anti invertase expression.
-                    p Once there is fructose in the system, it is capable of binding to FruR (In the form of Fructose-1-Phosphate) and reducing FruR’s affinity for pFruB. This way, anti invertase production is increased.
 
-                    h2 Atmosphere Regulated Kill Switch
-                    p The Killswitch construct is an important part of our project since our product is closely associated with a commonly consumed item like sugar. We constructed the killswitch by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. In hypoxic environment (evidently, inside the sugarcane stem), the FNR promoter remains active and facilitates the production of ccdA antitoxin. CcdB is constitutively expressed in any condition. The simultaneous expression of ccdA as well as ccdB leads to the formation of a degradation complex. This way, the bacteria survive inside the sugarcane stem.
-                    p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
+                    .custom-row
+                      .col.f-40
+                        div
+                          h2 pFruB-Cra Construct
+                          p The pFruB-Cra construct has been designed to express anti-invertase according to the levels of fructose in the sugarcane stem. In the absence of fructose, the FruR transcription factor represses the pFruB promoter which is in control of anti invertase expression.
+                          p Once there is fructose in the system, it is capable of binding to FruR (In the form of Fructose-1-Phosphate) and reducing FruR’s affinity for pFruB. This way, anti invertase production is increased.
+                      .col.f-60
+                        - var imgpath = require('./assets/img/Poster--Design_pFruB.gif')['default']
+                        +img("design--pFruB", imgpath, "pFruB")
+
+                    .custom-row
+                      .col.f-60
+                        - var imgpath = require('./assets/img/Poster--Design_KS.gif')['default']
+                        +img("design--KS", imgpath, "KS")
+                      .col.f-40
+                        div
+                          h2 Atmosphere Regulated Kill Switch
+                          p The Killswitch construct is an important part of our project since our product is closely associated with a commonly consumed item like sugar. We constructed the killswitch by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. In hypoxic environment (evidently, inside the sugarcane stem), the FNR promoter remains active and facilitates the production of ccdA antitoxin. CcdB is constitutively expressed in any condition. The simultaneous expression of ccdA as well as ccdB leads to the formation of a degradation complex. This way, the bacteria survive inside the sugarcane stem.
+                          p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
 
           .row
             #modelling_block.section.third
               // 400 x 200 pixels
-              img(src='https://dummyimage.com/400x350/000/fff&text=Modelling')
+              img(src=require('./assets/img/Poster--Modelling.svg')['default'])
               .info
                 .title
                   #modelling_title
@@ -90,8 +102,8 @@ html
                           h2 pFruB-Cra Construct
                           p Our model is the first-of-its-kind as we could not find any other mathematical model of the construct in literature. Teams in the future can now use this model in their projects and build upon it even further. 
                       .col.f-30
-                          - var imgpath = require('./assets/img/Model--equations.png')['default']
-                          +img("modelling-pFruB", imgpath, "Equations for the pFruB-Cra Construct")
+                        - var imgpath = require('./assets/img/Model--equations.png')['default']
+                        +img("modelling-pFruB", imgpath, "Equations for the pFruB-Cra Construct")
                     h2 
                       em In silico
                       |  Simulation of the Kill Switch
@@ -110,12 +122,12 @@ html
 
             #engineering_block.section.third
               // 400 x 200 pixels
-              img(src='https://dummyimage.com/400x350/000/fff&text=Engineering')
+              img(src=require('./assets/img/Poster--Engineering.svg')['default'])
               .info
                 .title Idea 
                 .text  How are you going to solve the problem? Where did the idea come from? 
             #safety_block.section.third
-              img(src='https://dummyimage.com/400x350/000/fff&text=Safety')
+              img(src=require('./assets/img/Poster--Safety.svg')['default'])
               .info
                 .title 
                   #safety_title
@@ -128,7 +140,7 @@ html
           .row
             #human_practices_block.section.third.first_text
               // 400 x 200 pixels
-              img(src='https://dummyimage.com/400x350/000/fff&text=Human_Practices')
+              img(src=require('./assets/img/Poster--Human_Practices.svg')['default'])
               .info
                 .title
                   #human_practices_title
@@ -142,9 +154,36 @@ html
 
                     #human_practices_map
                       include ./assets/img/Human_Practices--map.svg
+
+                    #callout_wrapper
+                      #Uttarakhand_callout.callout
+                        .callout-title
+                          h3 Kiccha Sugar Company, Uttarakhand
+                        .callout-content
+                          p We gained knowledge on the Mill and Sugarcane farmer relationships and more importantly the impact of the pandemic on the sugar industry.
+                      #UttarPradesh_callout.callout
+                        .callout-title
+                          h3 Sugar Mill Federation, Uttar Pradesh
+                        .callout-content
+                          p Each belt has unique problems when it comes to post harvest losses and our solution would have to be comprehensive.
+                      #Maharashtra_callout.callout
+                        .callout-title
+                          h3 Farmers from Maharashtra
+                        .callout-content
+                          p Interactions validated our approach to the delivery mechanism involving targeted application of our product right before harvest. They reenforced our biosafety mechanism by alleviating our concerns involving the use of raw sugarcane and any subsequent contamination.
+                      #TamilNadu_callout.callout
+                        .callout-title
+                          h3 Farmers from Tamil Nadu
+                        .callout-content
+                          p Validated our delivery mechanism and gave us feedback on their expectations from the solution.
+                      #Karnataka_callout.callout
+                        .callout-title
+                          h3 Farmers from Karnataka
+                        .callout-content
+                          p There are innate inefficiencies in the system that can be tackled by our solution.
             #implementation_block.section.third
               // 400 x 200 pixels
-              img(src='https://dummyimage.com/400x350/000/fff&text=Implementation')
+              img(src=require('./assets/img/Poster--Implementation.svg')['default'])
               .info
                 .title
                   #implementation_title
@@ -200,7 +239,7 @@ html
                     +img("implementation-PFD", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
 
             #entrepreneurship_block.section.third
-              img(src='https://dummyimage.com/400x350/000/fff&text=Entrepreneurship')
+              img(src=require('./assets/img/Poster--Entrepreneurship.svg')['default'])
               .info
                 .title 
                   #entrepreneurship_title 
@@ -288,7 +327,7 @@ html
           .row
             #sci_comn_block.section.half
               // 600 x 200 pixels
-              img(src='https://dummyimage.com/600x250/000/fff&text=Science_Communication')
+              img(src=require('./assets/img/Poster--Education.svg')['default'])
               .info
                 .title
                   #sci_comn_title
@@ -348,7 +387,7 @@ html
                           p This year, we collaborated with IIT Madras and the University of Rochester to expand on the Language Project  initiative and translated iGEM Resources into various Indian regional languages. 
             #software_block.section.half
               // 600 x 200 pixels
-              img(src='https://dummyimage.com/600x250/000/fff&text=Software')
+              img(src=require('./assets/img/Poster--Software.svg')['default'])
               .info
                 .title Idea 
                 .text  How are you going to solve the problem? Where did the idea come from? 

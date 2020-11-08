@@ -49,6 +49,11 @@
     }
   }
 }
+
+a.figure {
+  text-decoration: none;
+}
+
 .lightbox {
   display: block;
   p {
@@ -201,8 +206,20 @@
 #safety_content {
 }
 
+#human_practices_title {
+  h1 {
+    color: nth(
+      $section-accents,
+      map-get($section-pages-map, "human_practices")
+    );
+  }
+}
+
+$states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
+
 #human_practices_content {
-  p {
+  position: relative;
+  & > p {
     &:first-of-type {
       width: 67%;
     }
@@ -213,30 +230,93 @@
   }
 
   #human_practices_map {
+    position: absolute;
     svg {
-      height: 650px;
-      width: 600px;
+      height: 450px;
+      width: 400px;
       margin-left: -50px;
 
-      g#layer3 {
+      g.clicked {
+        transform: scale(1.3);
+      }
+
+      g {
         transition: all 0.3s ease;
-        transform-origin: 195px 155px;
 
         path {
           transition: all 0.3s ease;
-          fill: blue !important;
         }
-
-        &:hover {
-          transform: scale(1.2);
-
-          path {
-            fill: black !important;
+      }
+      @each $state in $states {
+        g#{"#" + $state + "_Marker"} {
+          &:hover {
+            transform: scale(1.3);
           }
         }
       }
+
+      g#Uttarakhand_Marker {
+        transform-origin: 160px 130px;
+      }
+
+      g#UttarPradesh_Marker {
+        transform-origin: 190px 175px;
+      }
+
+      g#Maharashtra_Marker {
+        transform-origin: 100px 278px;
+      }
+
+      g#Karnataka_Marker {
+        transform-origin: 113px 335px;
+      }
+
+      g#TamilNadu_Marker {
+        transform-origin: 145px 377px;
+      }
     }
   }
+
+  #callout_wrapper {
+    position: absolute;
+    z-index: 50;
+    width: 60%;
+    right: 0;
+
+    .callout {
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 15px;
+      background-color: lighten(#D6FEFF, 5%);
+      border: 1px solid #009C9F;
+    }
+
+    h3 {
+      color: #007679;
+      font-size: 1.2rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+
+@each $state in $states {
+  #{"#" + $state + "_callout"} {
+    display: none;
+  }
+
+  body[data-state=#{$state}] {
+    #{"#" + $state + "_callout"} {
+      display: block;
+    }
+  }
+
+  
 }
 
 #implementation_title {
