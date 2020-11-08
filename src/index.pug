@@ -13,11 +13,11 @@ html
                 .title
                   #title_title
                     - var imgpath = require('./assets/img/Title--SugarGain_logo.png')['default']
-                    +img("title-one", imgpath, "SugarGain Logo", 80, "3rem 0")
+                    +img("title-one", imgpath, "", 80, "3rem 0")
                 .text
                   #title_content
-                    p Shruti Sridhar, Gourav Saha, Pranav Ballaney, Yogen Borkar, Ameya Thete, Saransh Gokhale, Sharanya Shastri, Arya Agarwal, Naman Choudhary, Suhas Badadal, Ithihas Madala, Shrilaxmi Patil, Sumit Biswas, Malabika Biswas
-                    p Birla Institute of Technology and Science, Pilani - K K Birla Goa Campus, India
+                    p Shruti Sridhar <sup> 1 </sup>, Gourav Saha <sup> 1 </sup>, Pranav Ballaney <sup> 1 </sup>, Yogen Borkar <sup> 1 </sup>, Ameya Thete <sup> 1 </sup>, Saransh Gokhale <sup> 1 </sup>, Sharanya Shastri <sup> 1 </sup>, Arya Agarwal <sup> 1 </sup>, Naman Choudhary <sup> 1 </sup>, Suhas Badadal <sup> 1 </sup>, Ithihas Madala <sup> 1 </sup>, Shrilaxmi Patil <sup> 1 </sup>, Sumit Biswas <sup> 1 </sup>, Malabika Biswas<sup> 1 </sup>
+                    p <sup> 1 </sup> Birla Institute of Technology and Science, Pilani - K. K. Birla Goa Campus, India
 
                     h3 Abstract
                     p Sugarcane faces the issue of post-harvest sucrose deterioration. This loss is caused by the activity of an enzyme called invertase. Post harvest, invertase cleaves sucrose which reduces sugar retrieval rates by up to 10.25%. We wanted to devise a solution that initiated grassroots-level changes for farmers. The farmer would administer our novel polymer-based inoculant, which would release our bacteria into the stem of the sugarcane, by employing an injector mechanism. Once inside, our genetic circuit inside the bacterial E.coli chassis is designed to exhibit anti-invertase activity, regulated by the amount of fructose inside the sugarcane in a continuous and controlled manner, through a biosensor mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. We have also kept in mind the significance of biosafety and designed a robust three-tier failsafe mechanism.
@@ -106,16 +106,16 @@ html
                         +img("modelling-pFruB", imgpath, "Equations for the pFruB-Cra Construct")
                     h2 
                       em In silico
-                      |  Simulation of the Kill Switch
+                      |  simulation of the Kill Switch
 
                     p The kill switch model involved an in silico simulation of the kill switch construct. We determined the response time using the model, and we found using a perturbative sensitivity approach that this can be reduced using techniques like mutagenesis
                     .custom-row
                       .col.f-70
                         - var imgpath = require('./assets/img/Kill_Switch--KillSwitchGraph.png')['default']
-                        +img("modelling-KS-graph", imgpath)
+                        +img("modelling-KS-graph", imgpath, "Kill switch simulation results")
                       .col.f-30
                         - var imgpath = require('./assets/img/Kill_Switch--Sensitivity.png')['default']
-                        +img("modelling-KS-sensitivity", imgpath, "", 95)
+                        +img("modelling-KS-sensitivity", imgpath, "Kill switch sensitivity analysis", 95)
 
                     p Apart from these four models we have also designed an auxotrophy model as part of our three tier biosafety mechanism; and a model to minimise our polymer inoculant toxicity. 
 
