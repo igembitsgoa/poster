@@ -2,79 +2,81 @@
 @import "_fonts.scss";
 @import "_colors.scss";
 
-p,
-strong,
-ol,
-li,
-table {
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  color: black;
-  margin-top: 0;
-  line-height: 1.35;
-}
-
-table {
-  line-height: 1.1;
-}
-
-.w-50 {
-  width: 50% !important;
-}
-
-.w-70 {
-  width: 70% !important;
-}
-
-.w-80 {
-  width: 80% !important;
-}
-
-.custom-row {
-  display: flex;
-}
-
-.col {
-  flex: 50%;
-  margin: 0.5rem;
-
-  &:first-of-type {
-    margin-left: 0;
+.page_wrapper {
+  p,
+  strong,
+  ol,
+  li,
+  table {
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    color: black;
+    margin-top: 0;
+    line-height: 1.5;
   }
 
-  &:last-of-type {
-    margin-right: 0;
+  table {
+    line-height: 1.1;
   }
-}
 
-.col.image {
-  display: flex;
-  align-items: center;
-
-  img {
-    width: unset;
-    display: block;
-    margin: auto;
+  .w-50 {
+    width: 50% !important;
   }
-}
 
-.lightbox {
-  display: block;
-  p {
-    display: none;
+  .w-70 {
+    width: 70% !important;
   }
-}
 
-.featherlight-content {
-  .lightbox {
-    p {
-      display: block;
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 1rem;
+  .w-80 {
+    width: 80% !important;
+  }
+
+  .custom-row {
+    display: flex;
+  }
+
+  .col {
+    flex: 50%;
+    margin: 0.5rem;
+
+    &:first-of-type {
+      margin-left: 0;
     }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .col.image {
+    display: flex;
+    align-items: center;
+
     img {
-      width: 100% !important;
+      width: unset;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .lightbox {
+    display: block;
+    p {
+      display: none;
+    }
+  }
+
+  .featherlight-content {
+    .lightbox {
+      p {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+      img {
+        width: 100% !important;
+      }
     }
   }
 }
@@ -82,9 +84,10 @@ table {
 // common rules for the title section
 #section_title {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: "Lato", sans-serif;
     margin: 1rem 0;
+    padding: 0;
   }
 }
 
@@ -93,7 +96,7 @@ table {
   p,
   ol,
   li {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   h2 {
     font-family: "Lato", sans-serif;
