@@ -4,7 +4,7 @@ mixin img(id, path, caption, width, margin)
   unless margin
     - var margin = "auto"
   a(href="#" data-featherlight="#" + id)
-    .lightbox(id=id)
+    span.lightbox(id=id)
       img(src=path style="width: " + width + "%; margin: " + margin)
       p.caption= caption
 
