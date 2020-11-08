@@ -6,14 +6,14 @@ html
       .page_center
         .poster_w.content
           .row
-            #title_block.section.full.first_text
+            #title_block.section.full
               // 1200 x 200 pixels
               img(src='https://dummyimage.com/1200x200/000/fff&text=SugarGain')
               .info
                 .title
                   #title_title
                     - var imgpath = require('./assets/img/Title--SugarGain_logo.png')['default']
-                    +img("title-one", imgpath, "hello", 80, "3rem 0")
+                    +img("title-one", imgpath, "SugarGain Logo", 80, "3rem 0")
                 .text
                   #title_content
                     p Shruti Sridhar, Gourav Saha, Pranav Ballaney, Yogen Borkar, Ameya Thete, Saransh Gokhale, Sharanya Shastri, Arya Agarwal, Naman Choudhary, Suhas Badadal, Ithihas Madala, Shrilaxmi Patil, Sumit Biswas, Malabika Biswas
@@ -55,7 +55,7 @@ html
                     p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
 
           .row
-            #modelling_block.section.third
+            #modelling_block.section.third.first_text
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Modelling')
               .info
@@ -64,38 +64,49 @@ html
                     h1 Modelling
                 .text
                   #modelling_content
-                    p We have designed six models that cover various aspects of SugarGain, they are: 
+                    p We have designed six models that cover various aspects of SugarGain. A few important ones have been highlighted below.
 
-                    ol
-                      li A model to describe our FruR-Cra system, along with molecular modelling and docking studies;
-                      li 
-                        | An 
-                        em in silico 
-                        | simulation of the kill switch;
-                      li A model to determine the composition and optimum viscosity of our novel polymer inoculant with biosafety considerations;
-                      li A virtual screening model to study invertase-anti-invertase interactions;
-                      li An auxotrophy model as part of our three tier biosafety mechanism; and 
-                      li A model to predict the growth of bacteria in the sugarcane matrix
-
-                    p A few important ones have been highlighted below.
-
-                    h2 Growth Model
-
-                    p growth model helped us prove the fact was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
+                    .custom-row
+                      .col.f-70
+                        div
+                          h2 Growth Model
+                          p The growth model helped us prove the fact was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
+                      .col.f-30
+                        - var imgpath = require('./assets/img/Growth_Model--GrowthPrediction.png')['default']
+                        +img("modelling-growth", imgpath, "Growth Model", 90)
 
                     h2 Virtual Screening
-
                     p The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
-
-                    h2 pFruB-Cra Construct
-
-                    p Our model is the first-of-its-kind as we could not find any other mathematical model of the construct in literature. Teams in the future can now use this model in their projects and build upon it even further. 
-
+                    .custom-row
+                      .col
+                        - var imgpath = require('./assets/img/VS--Ramachandran Plot.png')['default']
+                        +img("modelling-vs-rama", imgpath, "Ramachandran Plot from Virtual Screening", 73 )
+                      .col
+                        - var imgpath = require('./assets/img/VS--Arabidopsis inhibitor.png')['default']
+                        +img("modelling-vs-ara", imgpath, "Arabidopsis Inhibitor")
+                    .custom-row
+                      .col.f-70
+                        div
+                          h2 pFruB-Cra Construct
+                          p Our model is the first-of-its-kind as we could not find any other mathematical model of the construct in literature. Teams in the future can now use this model in their projects and build upon it even further. 
+                      .col.f-30
+                          - var imgpath = require('./assets/img/Model--equations.png')['default']
+                          +img("modelling-pFruB", imgpath, "Equations for the pFruB-Cra Construct")
                     h2 
                       em In silico
                       |  Simulation of the Kill Switch
 
                     p The kill switch model involved an in silico simulation of the kill switch construct. We determined the response time using the model, and we found using a perturbative sensitivity approach that this can be reduced using techniques like mutagenesis
+                    .custom-row
+                      .col.f-70
+                        - var imgpath = require('./assets/img/Kill_Switch--KillSwitchGraph.png')['default']
+                        +img("modelling-KS-graph", imgpath)
+                      .col.f-30
+                        - var imgpath = require('./assets/img/Kill_Switch--Sensitivity.png')['default']
+                        +img("modelling-KS-sensitivity", imgpath, "", 95)
+
+                    p Apart from these four models we have also designed an auxotrophy model as part of our three tier biosafety mechanism; and a model to minimise our polymer inoculant toxicity. 
+
 
             #engineering_block.section.third
               // 400 x 200 pixels
@@ -132,10 +143,11 @@ html
                 .text 
                   #implementation_content
                     .custom-row
-                      .col
-                        h2 Delivery Mechanism
-                        p The delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer could choose when to use the product. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system.
-                      .col.image
+                      .col.f-60
+                        div
+                          h2 Delivery Mechanism
+                          p The delivery mechanism had to be something easy to use and the inoculant needed to have a large shelf life so that the farmer could choose when to use the product. This inoculant would be supplied to the farmer in the form of a cartridge with an injector system.
+                      .col.image.f-40
                         img(src = require('./assets/img/Implementation--injection.jpg')['default'] style="margin-top: 0.5rem")
 
                     h2 Formulation of the Inoculant
@@ -188,9 +200,9 @@ html
                   #entrepreneurship_content
                     p We aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
                     .custom-row
-                      .col
+                      .col.f-40
                         p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs shown in, and using the following pie chart. The proportions of costs to the total costs were calculated using Shuler & Kargi (2002). Using this, we calculate the total ‘other costs’ to be ₹25,000,000.
-                      .col.image
+                      .col.image.f-60
                         - var imgpath = require('./assets/img/Entrepreneurship--PieChart.png')['default']
                         +img("entrepreneurship-pie", imgpath, "Distribution of other costs", 100)
 
@@ -275,22 +287,56 @@ html
                 .text
                   #sci_comn_content
                     p Science communication and education both go hand-in-hand. Our team took a multifaceted approach towards scientific communication. Our goal being to make science accessible to everyone while still maintaining the highest integrity of research.
-                    h2 Outreach Initiatives
-                    img(src = require('./assets/img/Education--iGEMPhrases.png')['default'])
-                    p In collaboration with the iGEM team from the University of Rochester, we created a short video consisting of ten common ASL phrases used during the Jamboree.
-                    //- img(src = require('./assets/img/Entrepreneurship--ProfitvsRecovery.png')['default'])
-                    p We had the opportunity to conduct three webinars for over 600 high school students in the 11th and 12th grades belonging to STEM backgrounds of Deeksha Center for Learning, Bangalore
-                    img(src = require('./assets/img/Education--Abhigyaan-1.png')['default'])
-                    p We, along with Abhigyaan - a student run organization of BITS Goa, debunked some myths about COVID-19 and promoted safer and smarter ways to deal with the pandemic through posters and infographics. 
-                    img(src = require('./assets/img/Education--InnerWheel.png')['default'])
-                    p Along with iGEM Rochester we helped Inner Wheel Foundation with their education initiative
-                    img(src = require('./assets/img/Education--HumansOfiGEM.png')['default'])
-                    p We started Humans of iGEM to help teams connect by hearing each other's stories and sharing their own.
-                    img(src = require('./assets/img/logo.jpg')['default'])
-                    h4 Application of Engineering Principles to Life Sciences
-                    p Along with the Centre for Technical Education of our university, we were able to start a course on synthetic biology for undergraduate students.
-                    //- img(src = require('./assets/img/logo.jpg')['default'])
-                    p This year, we collaborated with IIT Madras and the University of Rochester to expand on the Language Project  initiative and translated iGEM Resources into various Indian regional languages. 
+                    .custom-row
+                      .col.align-items-start
+                        div
+                          - var imgpath = require('./assets/img/Education--Webinar.png')['default']
+                          +img("education-webinar", imgpath, "", 100)
+                          br
+                          p We had the opportunity to conduct three webinars for over 600 high school students in the 11th and 12th grades belonging to STEM backgrounds of Deeksha Center for Learning, Bangalore
+                      .col.align-items-start
+                        div
+                          - var imgpath = require('./assets/img/Education--iGEMPhrases.png')['default']
+                          +img("education-iGEMphrases", imgpath, "", 100)
+                          br
+                          p In collaboration with the iGEM team from the University of Rochester, we created a short video consisting of ten common ASL phrases used during the Jamboree.
+                    .custom-row
+                      .col
+                        div
+                          - var imgpath = require('./assets/img/Education--Abhigyaan-1.png')['default']
+                          +img("education-abhigyaan", imgpath, "", 60)
+                          br
+                          strong Collaboration with Abhigyaan
+                          p Along with Abhigyaan, a student-run organization of BITS Goa, we debunked some myths about COVID-19 and promoted safer and smarter ways to deal with the pandemic through posters and infographics. 
+                      .col.align-items-start                           
+                        div
+                          - var imgpath = require('./assets/img/Education--HumansOfiGEM.png')['default']
+                          +img("education-humans", imgpath, "", 60)
+                          br
+                          strong Humans of iGEM
+                          p We started Humans of iGEM to help teams connect by hearing each other's stories and sharing their own. 
+                    .custom-row
+                      .col.image.f-20
+                        img(src = require('./assets/img/Education--InnerWheel.png')['default'])
+                      .col.f-80
+                        div
+                          strong Collaboration with iGEM Rochester and The Inner Wheel Club
+                          p Along with iGEM Rochester we helped Inner Wheel Foundation with their education initiative.
+                    .custom-row
+                      .col.f-50
+                        div
+                          - var imgpath = require('./assets/img/logo.jpg')['default']
+                          +img("education-logo", imgpath, "", 60)
+                          br
+                          strong Application of Engineering Principles to Life Sciences
+                          p Along with the Centre for Technical Education of our university, we were able to start a course on synthetic biology for undergraduate students.
+                      .col.f-50
+                        div
+                          - var imgpath = require('./assets/img/Education--LP.jpg')['default']
+                          +img("education-LP", imgpath, "")
+                          br
+                          strong The Language Project
+                          p This year, we collaborated with IIT Madras and the University of Rochester to expand on the Language Project  initiative and translated iGEM Resources into various Indian regional languages. 
             #software_block.section.half
               // 600 x 200 pixels
               img(src='https://dummyimage.com/600x250/000/fff&text=Software')

@@ -1,6 +1,7 @@
 @use "sass:list";
 @import "_fonts.scss";
 @import "_colors.scss";
+@import "_utils.scss";
 
 .page_wrapper {
   p,
@@ -18,26 +19,15 @@
   table {
     line-height: 1.1;
   }
-
-  .w-50 {
-    width: 50% !important;
-  }
-
-  .w-70 {
-    width: 70% !important;
-  }
-
-  .w-80 {
-    width: 80% !important;
-  }
-
   .custom-row {
     display: flex;
+    justify-content: space-evenly;
   }
 
   .col {
     flex: 50%;
     margin: 0.5rem;
+    display: flex;
 
     &:first-of-type {
       margin-left: 0;
@@ -53,30 +43,30 @@
     align-items: center;
 
     img {
-      width: unset;
+      width: 100%;
       display: block;
       margin: auto;
     }
   }
-
-  .lightbox {
-    display: block;
-    p {
-      display: none;
-    }
+}
+.lightbox {
+  display: block;
+  p {
+    display: none;
   }
+}
 
-  .featherlight-content {
-    .lightbox {
-      p {
-        display: block;
-        text-align: center;
-        font-size: 1rem;
-        margin-top: 1rem;
-      }
-      img {
-        width: 100% !important;
-      }
+.featherlight-content {
+  .lightbox {
+    p {
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 1rem;
+      font-family: 'Lato', sans-serif;
+    }
+    img {
+      width: 100% !important;
     }
   }
 }
