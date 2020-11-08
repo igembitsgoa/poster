@@ -63,13 +63,13 @@
       text-align: center;
       font-size: 1rem;
       margin-top: 1rem;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
     }
     img {
       width: 100% !important;
     }
   }
-} 
+}
 
 // common rules for the title section
 #section_title {
@@ -199,6 +199,44 @@
 }
 
 #safety_content {
+}
+
+#human_practices_content {
+  p {
+    &:first-of-type {
+      width: 67%;
+    }
+  }
+
+  #human_practices--chart {
+    margin-top: -80px;
+  }
+
+  #human_practices_map {
+    svg {
+      height: 650px;
+      width: 600px;
+      margin-left: -50px;
+
+      g#layer3 {
+        transition: all 0.3s ease;
+        transform-origin: 195px 155px;
+
+        path {
+          transition: all 0.3s ease;
+          fill: blue !important;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+
+          path {
+            fill: black !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 #implementation_title {

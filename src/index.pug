@@ -55,7 +55,7 @@ html
                     p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
 
           .row
-            #modelling_block.section.third.first_text
+            #modelling_block.section.third
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Modelling')
               .info
@@ -126,13 +126,22 @@ html
                     p As the first layer of biosafety, we wanted to render the bacteria auxotrophic to the sugarcane environment. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we planned to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to. The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). The third failsafe lies in the processing of sugarcane juice itself. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which should kill the bacteria.
 
           .row
-            #human_practices_block.section.third
+            #human_practices_block.section.third.first_text
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Human_Practices')
               .info
-                .title  Problem 
+                .title
+                  #human_practices_title
+                    h1 Human Practices
                 .text
-                  | What is the problem your team is working to solve? How does it affect the world?
+                  #human_practices_content
+                    p Our approach to human practices consisted of multiple frameworks that involved interviewing experts, users and regulatory agencies. We made it a point to identify and cover all our major stakeholders, farmers, mill federations and public mills. 
+
+                    - var imgpath = require('./assets/img/Human_Practices--chart_2.svg')['default']
+                    +img("human_practices--chart", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
+
+                    #human_practices_map
+                      include ./assets/img/Human_Practices--map.svg
             #implementation_block.section.third
               // 400 x 200 pixels
               img(src='https://dummyimage.com/400x350/000/fff&text=Implementation')
@@ -198,10 +207,10 @@ html
                     h1 Entrepreneurship
                 .text
                   #entrepreneurship_content
-                    p We aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
+                    p For a product to be commercialised we need an economic model which demonstrates its viability. We conducted a detailed study on the global scope and formulated an economic viability model to help with the industrial scale-up of our product. Initially we aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
                     .custom-row
                       .col.f-40
-                        p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs shown in, and using the following pie chart. The proportions of costs to the total costs were calculated using Shuler & Kargi (2002). Using this, we calculate the total ‘other costs’ to be ₹25,000,000.
+                        p We found land costs to be ₹2,500,000 via interactions with multiple stakeholders and then scaled up the rest of the costs using the adjoining pie chart [Shuler &amp; Kargi (2002)]. Using this, we calculate the total ‘other costs’ to be ₹25,000,000.We aim to test our enzyme on a small scale of 10,000 hectares as a pilot study. 
                       .col.image.f-60
                         - var imgpath = require('./assets/img/Entrepreneurship--PieChart.png')['default']
                         +img("entrepreneurship-pie", imgpath, "Distribution of other costs", 100)
