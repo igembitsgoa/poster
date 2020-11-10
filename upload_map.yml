@@ -230,11 +230,11 @@ assets:
 css:
   Poster/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/Poster/indexCSS?action=raw&ctype=text/css
-    md5: ebcb80b8ee874d8771e04a9eb59796dc
+    md5: 1a41605408edfce3fa3902b5b1b30a25
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 2e1141e8708a28b365ada64a8a9c2cf1
+    md5: 5690fd4dd37528411cc284fd357e2de6
 js:
   Poster.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/PosterJS?action=raw&ctype=text/javascript
