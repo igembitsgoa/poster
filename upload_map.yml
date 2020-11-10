@@ -135,6 +135,10 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/c/c9/T--BITSPilani-Goa_India--Poster_img--Model--equations.png
     md5: d21807621057f09136eb4ce94a93c7fe
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Model--equations.png
+  assets/img/Model--growth_eq.png:
+    link_URL: https://2020.igem.org/wiki/images/0/0e/T--BITSPilani-Goa_India--Poster_img--Model--growth_eq.png
+    md5: f1e2cd012a5bb8643d7338c442f64018
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Model--growth_eq.png
   assets/img/Poster--Design.svg:
     link_URL: https://2020.igem.org/wiki/images/4/4c/T--BITSPilani-Goa_India--Poster_img--Poster--Design.svg
     md5: a64c955a907388de83d212be09401193
@@ -230,11 +234,11 @@ assets:
 css:
   Poster/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/Poster/indexCSS?action=raw&ctype=text/css
-    md5: 1a41605408edfce3fa3902b5b1b30a25
+    md5: 117367e6993c883bd200fb2766b13c37
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 5690fd4dd37528411cc284fd357e2de6
+    md5: 904723ca2fd36c54135cef0afc54004d
 js:
   Poster.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/PosterJS?action=raw&ctype=text/javascript
