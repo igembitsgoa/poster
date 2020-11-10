@@ -191,9 +191,6 @@ a.imgcaption {
   }
 }
 
-#title_title {
-}
-
 #title_content {
   h3 {
     font-family: "Lato", sans-serif;
@@ -209,16 +206,10 @@ a.imgcaption {
   }
 }
 
-#inspiration_content {
-}
-
 #modelling_title {
   h1 {
     color: nth($section-accents, map-get($section-pages-map, "modelling"));
   }
-}
-
-#modelling_content {
 }
 
 #design_title {
@@ -227,16 +218,10 @@ a.imgcaption {
   }
 }
 
-#design_content {
-}
-
 #safety_title {
   h1 {
     color: nth($section-accents, map-get($section-pages-map, "modelling"));
   }
-}
-
-#safety_content {
 }
 
 #human_practices_title {
@@ -367,9 +352,6 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
   }
 }
 
-#implementation_content {
-}
-
 #sci_comn_title {
   h1 {
     color: nth($section-accents, map-get($section-pages-map, "software"));
@@ -394,5 +376,23 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
   }
   h3 {
     color: nth($section-accents, map-get($section-pages-map, "software"));
+  }
+}
+
+#engineering_title {
+  h1 {
+    color: nth($section-accents, map-get($section-pages-map, "modelling"));
+  }
+}
+
+#entrepreneurship_title {
+  h1 {
+    color: nth($section-accents, map-get($section-pages-map, "human_practices"));
+  }
+}
+
+#acknowledgements_title {
+  h1 {
+    color: nth($section-accents, map-get($section-pages-map, "acknowledgements"));
   }
 }
