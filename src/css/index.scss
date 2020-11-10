@@ -25,7 +25,7 @@
   position: absolute;
   width: 99%;
   height: 100%;
-  background-color: #25CED1;
+  background-color: #25ced1;
   z-index: -1;
 }
 
@@ -43,7 +43,7 @@
   }
 
   p {
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0;
   }
 
@@ -237,19 +237,18 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
 
 #human_practices_content {
   position: relative;
-  & > p {
-    &:first-of-type {
-      width: 67%;
-    }
+
+  .intro {
+    width: 67%;
   }
 
   #human_practices--chart {
-    margin-top: -80px;
+    margin-top: -70px;
   }
 
   #HP_map_wrapper {
     height: 500px;
-    position:relative;
+    position: relative;
   }
 
   #human_practices_map {
@@ -365,8 +364,8 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
 }
 
 #software_content {
-
-  h2, h3 {
+  h2,
+  h3 {
     font-family: "Lato", sans-serif;
     margin-bottom: 0.3rem;
   }
@@ -387,12 +386,18 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
 
 #entrepreneurship_title {
   h1 {
-    color: nth($section-accents, map-get($section-pages-map, "human_practices"));
+    color: nth(
+      $section-accents,
+      map-get($section-pages-map, "human_practices")
+    );
   }
 }
 
 #acknowledgements_title {
   h1 {
-    color: nth($section-accents, map-get($section-pages-map, "acknowledgements"));
+    color: nth(
+      $section-accents,
+      map-get($section-pages-map, "acknowledgements")
+    );
   }
 }

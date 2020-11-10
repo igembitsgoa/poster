@@ -86,14 +86,15 @@ html
                       .col.f-60
                         div
                           h2 Growth Model
-                          p The growth model helped us prove the fact was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
-                          h2 Virtual Screening
-                          p  The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the  
+                          p The growth model helped us prove that our chassis was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
+                          - var imgpath = require('./assets/img/Model--growth_eq.png')['default']
+                          +img("modelling-growth-curve", imgpath, "Growth Curve Equation", 90)
                       .col.f-40
                         - var imgpath = require('./assets/img/Growth_Model--GrowthPrediction.png')['default']
                         +img("modelling-growth", imgpath, "Growth Model", 90)
 
-                    p.mt--20 structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
+                    h2 Virtual Screening
+                    p  The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
                     .custom-row
                       .col
                         - var imgpath = require('./assets/img/VS--Ramachandran Plot.png')['default']
@@ -143,8 +144,15 @@ html
                     h1 Safety
                 .text 
                   #safety_content
+
                     p Since our product, SugarGain, will be closely associated with sugar and sugarcane pb, we wanted to enforce robust measures to ensure biosafety. We came up with a three-tier biosafety mechanism.
-                    p As the first layer of biosafety, we wanted to render the bacteria auxotrophic to the sugarcane environment. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we planned to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to. The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). The third failsafe lies in the processing of sugarcane juice itself. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which should kill the bacteria.
+                    ol
+                      li The first layer of biosafety is the creation of an auxotrophic strain of our chassis. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we plan to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to.
+                      li The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). 
+                      li The third failsafe is  the processing of sugarcane juice. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which would kill the bacteria. 
+                    h2 Industrial Safety 
+                    p We have tried inculcating biosafety at every design step. The inoculant ingredients are such that each of them are removed during the processing of sugarcane .Cane that is used for raw consumption is different from the cane being sent to the mill. We were also mindful of sterilization and biosafety regulation of our country, that would need to be followed for a successful industrial scaleup. For this we got help from Dr Rangarajan from our institute, and Andre Hermann from the policy committee respectively.
+
                     br
                     .custom-row.justify-content-center
                       - var imgpath = require('./assets/img/Safety--Biosafety.png')['default']
@@ -159,12 +167,12 @@ html
                     h1 Human Practices
                 .text
                   #human_practices_content
-                    p Our approach to human practices consisted of multiple frameworks that involved interviewing experts, users and regulatory agencies. We made it a point to identify and cover all our major stakeholders, farmers, mill federations and public mills. 
+                    p.intro Our approach to human practices consisted of multiple frameworks that involved interviewing experts, users and regulatory agencies. We made it a point to identify and cover all our major stakeholders, farmers, mill federations, public mills and consumers. 
 
                     - var imgpath = require('./assets/img/Human_Practices--chart.png')['default']
                     +img("human_practices--chart", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
                     br
-                    h2 Farmers
+                    h2 Stakeholders
                     p We interviewed farmers from different belts across the country to find out about the differences in harvesting and crushing practices. Apart from these, we found out some key aspects from each belt which have been illustrated in the diagram below.
 
                     #HP_map_wrapper
@@ -228,6 +236,8 @@ html
                               | A sugarcane farm in Mandya, Karnataka
 
                     h2 Global Scope and GMOs
+                    p We circulated a survey to gauge public opinion of our project. The results of the survey showed that 58.3% of the participants had a positive response towards the consumption of the downstream sugar for sugarcane treated with our product. Our survey also highlighted the importance of bringing awareness about post harvest losses and current policies regarding the same. 
+
                     p We could conclude from our global study that our project had a global scope and ubiquitous applicability which was not just restricted to India.
                     p André Hermann from Brazil told us that change in the sugarcane industry can be brought about in two ways
                     ol
@@ -447,7 +457,7 @@ html
                     h1 Contributions and Software
                 .text
                   #software_content
-                    
+
                     p We came across iGEM wiki software built by previous iGEM teams: iGEM Virginia 2018, iGEM Toronto 2015 and iGEM Waterloo 2017. While trying to build our wiki with their software, we realized the scope for several improvements and the potential for a holistic solution that combines their functionality. So, we started working from scratch, incorporating their features, but also adding new features like markdown support and URL replacement while uploading to iGEM servers.
                     - var imgpath = require('./assets/img/Contribution--WikiSync.png')['default']
                     +img("software--wikisync", imgpath, "")
@@ -458,7 +468,7 @@ html
 
                     - var imgpath = require('./assets/img/Contribution--WikiStarter.png')['default']
                     +img("software--starter", imgpath, "")
-                    
+
                     p While WikiSync only uploads files, the iGEM Wiki Starter Pack is a holistic framework for building iGEM Wikis. Building upon iGEM Virginia's WikiBrick in spirit, we built this framework to provide teams with a mobile-responsive starter template and allow them to focus on the content and design of their wiki. However, the tooling iGEM WikiBrick was built on is now outdated. The Wiki Starter Pack was written from scratch, in order to conform to the latest practices in the web development industry, and to make future updates easier.
                     p The following teams developed their wikis this year using our software and provided feedback towards its improvement: iGEM Stockholm, iGEM MIT MAHE, iGEM UNSW Australia, iGEM Virginia, iGEM UGent Belgium, iGEM NYU Abu Dhabi, iGEM IIT Roorkee, iGEM GZ HFI
 
@@ -483,6 +493,10 @@ html
                   p 
                     strong Consultation: 
                     | Andre Hermann, Dr. Anirban Roy, Ashish Dagade, Dr. Bejoy Thomas, Rohan Ranganath, Shubhankar Londhe, Ujjal Sharma, Dr. Vivek Rangarajan
+
+                  p 
+                    strong General Support: 
+                    | Arul Murugan, Lakshmi Menon, Vijay Hemmadi.
 
         .poster_w.display
           #section_title
