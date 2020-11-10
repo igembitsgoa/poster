@@ -257,6 +257,11 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
     margin-top: -80px;
   }
 
+  #HP_map_wrapper {
+    height: 450px;
+    position:relative;
+  }
+
   #human_practices_map {
     position: absolute;
     svg {

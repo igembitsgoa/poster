@@ -17,8 +17,8 @@ html
                     +img("title-one", imgpath, "", 80, "3rem 0")
                 .text
                   #title_content
-                    p Shruti Sridhar <sup> 1 </sup>, Gourav Saha <sup> 1 </sup>, Pranav Ballaney <sup> 1 </sup>, Yogen Borkar <sup> 1 </sup>, Ameya Thete <sup> 1 </sup>, Saransh Gokhale <sup> 1 </sup>, Sharanya Shastri <sup> 1 </sup>, Arya Agarwal <sup> 1 </sup>, Naman Choudhary <sup> 1 </sup>, Suhas Badadal <sup> 1 </sup>, Ithihas Madala <sup> 1 </sup>, Shrilaxmi Patil <sup> 1 </sup>, Sumit Biswas <sup> 1 </sup>, Malabika Biswas<sup> 1 </sup>
-                    p <sup> 1 </sup> Birla Institute of Technology and Science, Pilani - K. K. Birla Goa Campus, India
+                    p Shruti Sridhar, Gourav Saha, Pranav Ballaney, Yogen Borkar, Ameya Thete, Saransh Gokhale, Sharanya Shastri, Arya Agarwal, Naman Choudhary, Suhas Badadal, Ithihas Madala, Shrilaxmi Patil, Sumit Biswas, Malabika Biswas
+                    p Birla Institute of Technology and Science, Pilani - K. K. Birla Goa Campus, India
 
                     h3 Abstract
                     p Sugarcane faces the issue of post-harvest sucrose deterioration. This loss is caused by the activity of an enzyme called invertase. Post harvest, invertase cleaves sucrose which reduces sugar retrieval rates by up to 10.25%. We wanted to devise a solution that initiated grassroots-level changes for farmers. The farmer would administer our novel polymer-based inoculant, which would release our bacteria into the stem of the sugarcane, by employing an injector mechanism. Once inside, our genetic circuit inside the bacterial E.coli chassis is designed to exhibit anti-invertase activity, regulated by the amount of fructose inside the sugarcane in a continuous and controlled manner, through a biosensor mechanism. We propose to use a modified type II ccdA-ccdB toxin-antitoxin system as our kill switch that is activated upon exposure to atmospheric concentrations of oxygen. We have also kept in mind the significance of biosafety and designed a robust three-tier failsafe mechanism.
@@ -128,18 +128,18 @@ html
                     p Apart from these four models we have also designed an auxotrophy model as part of our three tier biosafety mechanism; and a model to minimise our polymer inoculant toxicity. 
 
 
-            #engineering_block.section.third.first_text
+            #engineering_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Engineering.svg')['default'])
               .info
                 .title 
-                  #safety_title
+                  #engineering_title
                     h1 Engineering
-                  #safety_content
+                  #engineering_content
                     - var imgpath = require('./assets/img/Engineering--pFruB_poster.jpg')['default']
-                    +img("engineering--pFruB", imgpath, "pFruB-Cra Construct", 95)
+                    +img("engineering--pFruB", imgpath, "pFruB-Cra Construct", 50)
                     - var imgpath = require('./assets/img/Engineering--KS_poster.jpg')['default']
-                    +img("engineering--KS", imgpath, "KS-Cra Construct", 95)
+                    +img("engineering--KS", imgpath, "KS Construct", 50)
 
             #safety_block.section.third
               img(src=require('./assets/img/Poster--Safety_red.svg')['default'])
@@ -151,9 +151,13 @@ html
                   #safety_content
                     p Since our product, SugarGain, will be closely associated with sugar and sugarcane pb, we wanted to enforce robust measures to ensure biosafety. We came up with a three-tier biosafety mechanism.
                     p As the first layer of biosafety, we wanted to render the bacteria auxotrophic to the sugarcane environment. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we planned to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to. The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). The third failsafe lies in the processing of sugarcane juice itself. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which should kill the bacteria.
+                    br
+                    .custom-row.justify-content-center
+                      - var imgpath = require('./assets/img/Safety--Biosafety.png')['default']
+                      +img("safety--biosafety", imgpath, "Three Tier Biosafety Mechanism", 85)
 
           .row
-            #human_practices_block.section.third
+            #human_practices_block.section.third.first_text
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Human_Practices.svg')['default'])
               .info
@@ -167,37 +171,80 @@ html
                     - var imgpath = require('./assets/img/Human_Practices--chart.png')['default']
                     +img("human_practices--chart", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
 
-                    #human_practices_map
-                      include ./assets/img/Human_Practices--map.svg
+                    h2 Farmers
+                    p We interviewed farmers from different belts across the country to find out about the differences in harvesting and crushing practices. Apart from these, we found out some key aspects from each belt which have been illustrated in the diagram below.
 
-                    #callout_wrapper
-                      #base_callout.callout
-                        p Click on the map to find out about what we learnt!
-                      #Uttarakhand_callout.callout
-                        .callout-title
-                          h3 Kiccha Sugar Company, Uttarakhand
-                        .callout-content
-                          p We gained knowledge about mill and sugarcane farmer relationships, and more importantly, the impact of the pandemic on the sugar industry.
-                      #UttarPradesh_callout.callout
-                        .callout-title
-                          h3 Sugar Mill Federation, Uttar Pradesh
-                        .callout-content
-                          p Each belt has unique problems when it comes to post harvest losses and our solution would have to be comprehensive.
-                      #Maharashtra_callout.callout
-                        .callout-title
-                          h3 Farmers from Maharashtra
-                        .callout-content
-                          p Interactions validated our approach to the delivery mechanism involving targeted application of our product right before harvest. They reenforced our biosafety mechanism by alleviating our concerns involving the use of raw sugarcane and any subsequent contamination.
-                      #TamilNadu_callout.callout
-                        .callout-title
-                          h3 Farmers from Tamil Nadu
-                        .callout-content
-                          p Validated our delivery mechanism and gave us feedback on their expectations from the solution.
-                      #Karnataka_callout.callout
-                        .callout-title
-                          h3 Farmers from Karnataka
-                        .callout-content
-                          p There are innate inefficiencies in the system that can be tackled by our solution.
+                    #HP_map_wrapper
+                      #human_practices_map
+                        include ./assets/img/Human_Practices--map.svg
+
+                      #callout_wrapper
+                        #base_callout.callout
+                          p Click on the map to learn about our insights from each belt!
+                        #Uttarakhand_callout.callout
+                          .callout-title
+                            h3 Kiccha Sugar Company, Uttarakhand
+                          .callout-content
+                            p We gained knowledge about mill and sugarcane farmer relationships, and more importantly, the impact of the pandemic on the sugar industry.
+                            br
+                            img(src=require('./assets/img/HP--Kichha.jpg')['default']).w-60
+                            br
+                            p.text-center 
+                              | Kichha Sugar Company, Uttarakhand
+                        #UttarPradesh_callout.callout
+                          .callout-title
+                            h3 Sugar Mill Federation, Uttar Pradesh
+                          .callout-content
+                            p Each belt has unique problems when it comes to post harvest losses and our solution would have to be comprehensive.
+                            br
+                            img(src=require('./assets/img/HP--Ohri.png')['default']).w-50
+                            br
+                            p.text-center 
+                              | Mr Sunil Kumar Ohri from 
+                              br 
+                              | the Sugar Factories Federation
+                            br
+                        #Maharashtra_callout.callout
+                          .callout-title
+                            h3 Farmers from Maharashtra
+                          .callout-content
+                            p Interactions validated our approach to the delivery mechanism involving targeted application of our product right before harvest. They reenforced our biosafety mechanism by alleviating our concerns involving the use of raw sugarcane and any subsequent contamination.
+                            br
+                            img(src=require('./assets/img/HP--Maharashtra.jpg')['default']).w-60
+                            br
+                            p.text-center 
+                              | A sugarcane farm in Maharashtra
+                        #TamilNadu_callout.callout
+                          .callout-title
+                            h3 Farmers from Tamil Nadu
+                          .callout-content
+                            p Validated our delivery mechanism and gave us feedback on their expectations from the solution.
+                            br
+                            img(src=require('./assets/img/HP--TamilNadu.png')['default']).w-60
+                            br
+                            p.text-center 
+                              | A sugarcane farmer from Tamil Nadu
+                        #Karnataka_callout.callout
+                          .callout-title
+                            h3 Farmers from Karnataka
+                          .callout-content
+                            p There are innate inefficiencies in the system that can be tackled by our solution.
+                            br
+                            img(src=require('./assets/img/HP--Mandya.jpg')['default']).w-60
+                            br
+                            p.text-center 
+                              | A sugarcane farm in Mandya, Karnataka
+
+                    h2 Global Scope and GMOs
+                    p We could conclude from our global study that our project had a global scope and ubiquitous applicability which was not just restricted to India.
+                    p André Hermann from Brazil told us that change in the sugarcane industry can be brought about in two ways
+                    ol
+                      li Through policy changes that involve the use of GMO in plants
+                      li By understanding existing agricultural heuristics for the commercial and semi-commercial cultivation of sugarcane.
+
+                    h2 Scaling Up
+                    p We reached out to professor and industry experts to gain insights on heuristics of process development for our product.
+
             #implementation_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Implementation_red.svg')['default'])
@@ -406,16 +453,29 @@ html
               // 600 x 200 pixels
               img(src=require('./assets/img/Poster--Software.svg')['default'])
               .info
-                .title Idea 
+                .title 
+  
                 .text  How are you going to solve the problem? Where did the idea come from? 
           .row
             #acknowledgements_block.section.full
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Title_red.svg')['default'])
               .info
-                .title  Problem 
+                .title
+                  #acknowledgements_title
+                    h1 Acknowledgements
                 .text
-                  | What is the problem your team is working to solve? How does it affect the world?
+                  #acknowledgements_content
+                  p We would like to extend our heartfelt gratitude to all our supporters for giving us this opportunity to participate in iGEM 2020. Our project would have not culminated without their valuable support, both financial and otherwise. We would like to thank the BITS Alumni Association (BITSAA), for their support and help with reaching out to our alumni. Furthermore, we would also like to thank the our Department of Biological Sciences as well as the Director for their consistent support and faith during the entire course of the project.
+                  p We would also like to thank Benchling and Twist Biosciences for their support during the iGEM season.
+
+                  p 
+                    strong Advisor: 
+                    | Varsha Jaisimha
+                  p 
+                    strong Consultation: 
+                    | Andre Hermann, Dr. Anirban Roy, Ashish Dagade, Dr. Bejoy Thomas, Rohan Ranganath, Shubhankar Londhe, Ujjal Sharma, Dr. Vivek Rangarajan
+
         .poster_w.display
           #section_title
           #section_text
