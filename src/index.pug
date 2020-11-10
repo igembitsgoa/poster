@@ -39,7 +39,6 @@ html
                     .custom-row.align-items-center
                       .col
                         img(src=require('./assets/img/sugargain-small-transparent.png')['default']).w-50
-
           .row
             #design_block.section.full
               img(src=require('./assets/img/Poster--Design.svg')['default'])
@@ -71,8 +70,6 @@ html
                           p It was constructed by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. The toxin, ccdB, is constitutively expressed, whereas the ccdA antitoxin is expressed only in a hypoxic environment (evidently, inside the sugarcane stem), due to the activity of the FNR promoter. 
                           p When simultaneously expressed, ccdA and ccdB form a degradation complex. This way, the bacteria survive inside the sugarcane stem.
                           p However, in an aerobic environment (the external atmosphere), the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
-
-
           .row
             #modelling_block.section.third
               // 400 x 200 pixels
@@ -126,8 +123,6 @@ html
                         +img("modelling-KS-sensitivity", imgpath, "Kill switch sensitivity analysis", 95)
 
                     p Apart from these four models we have also designed an auxotrophy model as part of our three tier biosafety mechanism; and a model to minimise our polymer inoculant toxicity. 
-
-
             #engineering_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Engineering.svg')['default'])
@@ -140,7 +135,6 @@ html
                     +img("engineering--pFruB", imgpath, "pFruB-Cra Construct", 50)
                     - var imgpath = require('./assets/img/Engineering--KS_poster.jpg')['default']
                     +img("engineering--KS", imgpath, "KS Construct", 50)
-
             #safety_block.section.third
               img(src=require('./assets/img/Poster--Safety_red.svg')['default'])
               .info
@@ -155,9 +149,8 @@ html
                     .custom-row.justify-content-center
                       - var imgpath = require('./assets/img/Safety--Biosafety.png')['default']
                       +img("safety--biosafety", imgpath, "Three Tier Biosafety Mechanism", 85)
-
           .row
-            #human_practices_block.section.third.first_text
+            #human_practices_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Human_Practices.svg')['default'])
               .info
@@ -244,7 +237,6 @@ html
 
                     h2 Scaling Up
                     p We reached out to professor and industry experts to gain insights on heuristics of process development for our product.
-
             #implementation_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Implementation_red.svg')['default'])
@@ -301,7 +293,6 @@ html
 
                     - var imgpath = require('./assets/img/Implementation--PFD.png')['default']
                     +img("implementation-PFD", imgpath, "The process flow diagram for industrial manufacture of the polymer inoculant.", 100)
-
             #entrepreneurship_block.section.third
               img(src=require('./assets/img/Poster--Entrepreneurship.svg')['default'])
               .info
@@ -387,7 +378,6 @@ html
                     p We can market our product in two ways. If the recovery rate is under 3.1%, it can be distributed as a government handout to promote more efficient production of sugar from sugarcane.
                     p On the other hand, if the increase in recovery rate is above 3.1% - which is more likely according to our preliminary calculation - it is a ‘profitable’ venture and will provide an incentive for farmers to buy it themselves. 
                     p Finally, economies of scale (reduction in costs as the scale of production increases) helps to increase profitability as we use the enzyme on a larger area of sugarcane plantations.
-
           .row
             #sci_comn_block.section.half
               // 600 x 200 pixels
@@ -449,13 +439,33 @@ html
                           br
                           strong The Language Project
                           p This year, we collaborated with IIT Madras and the University of Rochester to expand on the Language Project  initiative and translated iGEM Resources into various Indian regional languages. 
-            #software_block.section.half
+            #software_block.section.half.first_text
               // 600 x 200 pixels
               img(src=require('./assets/img/Poster--Software.svg')['default'])
               .info
                 .title 
-  
-                .text  How are you going to solve the problem? Where did the idea come from? 
+                  #software_title
+                    h1 Contributions and Software
+                .text
+                  #software_content
+                    
+                    p We came across iGEM wiki software built by previous iGEM teams: iGEM Virginia 2018, iGEM Toronto 2015 and iGEM Waterloo 2017. While trying to build our wiki with their software, we realized the scope for several improvements and the potential for a holistic solution that combines their functionality. So, we started working from scratch, incorporating their features, but also adding new features like markdown support and URL replacement while uploading to iGEM servers.
+                    - var imgpath = require('./assets/img/Contribution--WikiSync.png')['default']
+                    +img("software--wikisync", imgpath, "")
+                    p Building an iGEM wiki has traditionally required teams to edit code in the browser. Inspired by iGEM Toronto's API and iGEM Virginia's iGEM WikiBrick, we built a continuous deployment tool, iGEM WikiSync, that allows teams to design, code and test their wiki on their local machine. It then automatically uploads all files to iGEM servers.
+
+                    h3 iGEM WikiSync Github Action
+                    p We also built a Github Actions plugin for iGEM WikiSync. This allows teams to integrate WikiSync into their CI/CD workflow, ensuring that the wiki always remains in sync with the codebase.
+
+                    - var imgpath = require('./assets/img/Contribution--WikiStarter.png')['default']
+                    +img("software--starter", imgpath, "")
+                    
+                    p While WikiSync only uploads files, the iGEM Wiki Starter Pack is a holistic framework for building iGEM Wikis. Building upon iGEM Virginia's WikiBrick in spirit, we built this framework to provide teams with a mobile-responsive starter template and allow them to focus on the content and design of their wiki. However, the tooling iGEM WikiBrick was built on is now outdated. The Wiki Starter Pack was written from scratch, in order to conform to the latest practices in the web development industry, and to make future updates easier.
+                    p The following teams developed their wikis this year using our software and provided feedback towards its improvement: iGEM Stockholm, iGEM MIT MAHE, iGEM UNSW Australia, iGEM Virginia, iGEM UGent Belgium, iGEM NYU Abu Dhabi, iGEM IIT Roorkee, iGEM GZ HFI
+
+                    h2 Improving the Fructose Biosensor, pFruB-FruR
+                    p We have added new information learnt from literature and new data and inferences learnt from our mathematical models to the existing part BBa_K2448032 created by iGEM Evry Paris-Saclay.
+                    
           .row
             #acknowledgements_block.section.full
               // 400 x 200 pixels

@@ -371,9 +371,23 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
   }
 }
 
-#sci_comn_content {
-  img {
-    display: block;
-    margin: 0 auto;
+#software_title {
+  h1 {
+    color: nth($section-accents, map-get($section-pages-map, "software"));
+  }
+}
+
+#software_content {
+
+  h2, h3 {
+    font-family: "Lato", sans-serif;
+    margin-bottom: 0.3rem;
+  }
+
+  h2 {
+    color: #ec6a82;
+  }
+  h3 {
+    color: nth($section-accents, map-get($section-pages-map, "software"));
   }
 }
