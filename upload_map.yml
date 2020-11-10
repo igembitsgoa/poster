@@ -67,6 +67,18 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/6/6b/T--BITSPilani-Goa_India--Poster_img--Engineering--KS_poster.jpg
     md5: 70846b8fd50f53c32dac94ab91d0e3b2
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Engineering--KS_poster.jpg
+  assets/img/Engineering--Killswitch.svg:
+    link_URL: https://2020.igem.org/wiki/images/e/ec/T--BITSPilani-Goa_India--Poster_img--Engineering--Killswitch.svg
+    md5: 12ef81cca2184435b7ecebdaa8431a14
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Engineering--Killswitch.svg
+  assets/img/Engineering--anti-invertase.svg:
+    link_URL: https://2020.igem.org/wiki/images/7/74/T--BITSPilani-Goa_India--Poster_img--Engineering--anti-invertase.svg
+    md5: f307e6ce9fb28acf1e103d783eb6e970
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Engineering--anti-invertase.svg
+  assets/img/Engineering--inoculant.svg:
+    link_URL: https://2020.igem.org/wiki/images/6/63/T--BITSPilani-Goa_India--Poster_img--Engineering--inoculant.svg
+    md5: 410e82a35f99d05632dbe572beed0447
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Engineering--inoculant.svg
   assets/img/Engineering--pFruB_poster.jpg:
     link_URL: https://2020.igem.org/wiki/images/f/fa/T--BITSPilani-Goa_India--Poster_img--Engineering--pFruB_poster.jpg
     md5: 651bbd3a1c620ee9cb031fa2f8584444
@@ -246,7 +258,7 @@ css:
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 479daec516a6a4ca953f0ad6a46a3e58
+    md5: 7fee9e69acfc4c5caa15acfeddd227a6
 js:
   Poster.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/PosterJS?action=raw&ctype=text/javascript
