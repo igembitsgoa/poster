@@ -31,6 +31,14 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/c/ce/T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
     md5: b8ee546acd6cc0c49f42ad3d48ef244f
     upload_filename: T--BITSPilani-Goa_India--Poster_fonts--lato-v16-latin--lato-v16-latin-regular.woff
+  assets/img/Contribution--WikiStarter.png:
+    link_URL: https://2020.igem.org/wiki/images/3/30/T--BITSPilani-Goa_India--Poster_img--Contribution--WikiStarter.png
+    md5: d49c417642f16c2f685c7b2d1c8a4aa1
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Contribution--WikiStarter.png
+  assets/img/Contribution--WikiSync.png:
+    link_URL: https://2020.igem.org/wiki/images/1/1c/T--BITSPilani-Goa_India--Poster_img--Contribution--WikiSync.png
+    md5: e57e215b612643f29a7ecbebb93b437f
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Contribution--WikiSync.png
   assets/img/Education--Abhigyaan-1.png:
     link_URL: https://2020.igem.org/wiki/images/9/9e/T--BITSPilani-Goa_India--Poster_img--Education--Abhigyaan-1.png
     md5: 938ac14de10a1c7e748a74770926667c
@@ -222,11 +230,11 @@ assets:
 css:
   Poster/index.css:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/Poster/indexCSS?action=raw&ctype=text/css
-    md5: 646b4a22d402afa8918729dda99e1e9e
+    md5: b970cd8a7609f1801934c0bd1e1b5007
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: a46226575fdcaca7370660e0f539730c
+    md5: 491b850c566a2f48d48f0d2192c9127c
 js:
   Poster.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/PosterJS?action=raw&ctype=text/javascript
