@@ -36,6 +36,9 @@ html
                     p Sugarcane is also one of the most widely-grown cash-crop in the country and is cultivated on around 50 million hectares of land.  Furthermore, sugarcane is also a major crop in countries such as Brazil, Mauritius, Mexico, Cuba and Indonesia. 
                     p We therefore chose to work on a problem plaguing both sugarcane farmers and the sugar industry: the problem of post-harvest sucrose deterioration.  The motivation to bring about change for sugarcane farmers  gave birth to our project SugarGain - where we aim to reduce post harvest losses and increase sugar recovery rates. 
                     p SugarGain is our way of making the world a sweeter place (quite literally!).
+                    .custom-row.align-items-center
+                      .col
+                        img(src=require('./assets/img/sugargain-small-transparent.png')['default']).w-50
 
           .row
             #design_block.section.full
@@ -53,8 +56,10 @@ html
                           h2 pFruB-Cra Construct
                           p The pFruB-Cra construct has been designed to express anti-invertase according to the levels of fructose in the sugarcane stem. In the absence of fructose, the FruR transcription factor represses the pFruB promoter which is in control of anti invertase expression.
                           p Once there is fructose in the system, it is capable of binding to FruR (In the form of Fructose-1-Phosphate) and reducing FruR’s affinity for pFruB. This way, anti invertase production is increased.
+                          h2 Atmosphere-Regulated Kill Switch
+                          p The kill switch is an important part since our product is closely associated with a common  consumable. 
                       .col.f-60
-                        - var imgpath = require('./assets/img/Poster--Design_pFruB.gif')['default']
+                        - var imgpath = require('./assets/img/Poster--Design_pFruB_small.gif')['default']
                         +img("design--pFruB", imgpath, "pFruB")
 
                     .custom-row 
@@ -63,9 +68,10 @@ html
                         +img("design--KS", imgpath, "KS")
                       .col.f-40
                         div
-                          h2 Atmosphere Regulated Kill Switch
-                          p The Killswitch construct is an important part of our project since our product is closely associated with a commonly consumed item like sugar. We constructed the killswitch by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. In hypoxic environment (evidently, inside the sugarcane stem), the FNR promoter remains active and facilitates the production of ccdA antitoxin. CcdB is constitutively expressed in any condition. The simultaneous expression of ccdA as well as ccdB leads to the formation of a degradation complex. This way, the bacteria survive inside the sugarcane stem.
-                          p When the bacteria are exposed to an aerobic environment (the external atmosphere),  the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
+                          p It was constructed by modifying the ccdB/ccdA toxin-antitoxin system by introducing the FNR promoter. The toxin, ccdB, is constitutively expressed, whereas the ccdA antitoxin is expressed only in a hypoxic environment (evidently, inside the sugarcane stem), due to the activity of the FNR promoter. 
+                          p When simultaneously expressed, ccdA and ccdB form a degradation complex. This way, the bacteria survive inside the sugarcane stem.
+                          p However, in an aerobic environment (the external atmosphere), the FNR promoter is repressed and ccdA production is ceased. This leads to a rapid increase in the ratio of toxin-antitoxin concentration and eventually cell death.
+
 
           .row
             #modelling_block.section.third
@@ -80,16 +86,17 @@ html
                     p We have designed six models that cover various aspects of SugarGain. A few important ones have been highlighted below.
 
                     .custom-row
-                      .col.f-70
+                      .col.f-60
                         div
                           h2 Growth Model
                           p The growth model helped us prove the fact was able to survive and replicate within the sugarcane matrix with a nontrivial growth rate. We were able to determine a closed-form function that modelled this growth.
-                      .col.f-30
+                          h2 Virtual Screening
+                          p  The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the  
+                      .col.f-40
                         - var imgpath = require('./assets/img/Growth_Model--GrowthPrediction.png')['default']
                         +img("modelling-growth", imgpath, "Growth Model", 90)
 
-                    h2 Virtual Screening
-                    p The virtual screening model helped us determine the structure of sugarcane invertase. We also determined the structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
+                    p.mt--20 structure’s correctness using its QMEAN score and Ramachandran plots. We found that Arabidopsis inhibitor had the lowest binding energy and therefore it could be used as a substitute for sugarcane anti-invertase for our downstream experiments.
                     .custom-row
                       .col
                         - var imgpath = require('./assets/img/VS--Ramachandran Plot.png')['default']
@@ -102,14 +109,14 @@ html
                         div
                           h2 pFruB-Cra Construct
                           p Our model is the first-of-its-kind as we could not find any other mathematical model of the construct in literature. Teams in the future can now use this model in their projects and build upon it even further. 
+                          h2 
+                            em In silico
+                            |  simulation of the Kill Switch
+
+                          p The kill switch model involved an in silico simulation of the kill switch construct. We determined the response time using the model, and we found using a perturbative sensitivity approach that this can be reduced using techniques like mutagenesis
                       .col.f-30
                         - var imgpath = require('./assets/img/Model--equations.png')['default']
                         +img("modelling-pFruB", imgpath, "Equations for the pFruB-Cra Construct")
-                    h2 
-                      em In silico
-                      |  simulation of the Kill Switch
-
-                    p The kill switch model involved an in silico simulation of the kill switch construct. We determined the response time using the model, and we found using a perturbative sensitivity approach that this can be reduced using techniques like mutagenesis
                     .custom-row
                       .col.f-70
                         - var imgpath = require('./assets/img/Kill_Switch--KillSwitchGraph.png')['default']
@@ -121,12 +128,19 @@ html
                     p Apart from these four models we have also designed an auxotrophy model as part of our three tier biosafety mechanism; and a model to minimise our polymer inoculant toxicity. 
 
 
-            #engineering_block.section.third
+            #engineering_block.section.third.first_text
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Engineering.svg')['default'])
               .info
-                .title Idea 
-                .text  How are you going to solve the problem? Where did the idea come from? 
+                .title 
+                  #safety_title
+                    h1 Engineering
+                  #safety_content
+                    - var imgpath = require('./assets/img/Engineering--pFruB_poster.jpg')['default']
+                    +img("engineering--pFruB", imgpath, "pFruB-Cra Construct", 95)
+                    - var imgpath = require('./assets/img/Engineering--KS_poster.jpg')['default']
+                    +img("engineering--KS", imgpath, "KS-Cra Construct", 95)
+
             #safety_block.section.third
               img(src=require('./assets/img/Poster--Safety_red.svg')['default'])
               .info
@@ -139,7 +153,7 @@ html
                     p As the first layer of biosafety, we wanted to render the bacteria auxotrophic to the sugarcane environment. Since nitrogenous amino acid levels remain constant inside the sugarcane even when nitrogen fertilisers are used, we planned to use HPLC to determine the exact amino acids that the bacteria will be auxotrophic to. The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). The third failsafe lies in the processing of sugarcane juice itself. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which should kill the bacteria.
 
           .row
-            #human_practices_block.section.third.first_text
+            #human_practices_block.section.third
               // 400 x 200 pixels
               img(src=require('./assets/img/Poster--Human_Practices.svg')['default'])
               .info
@@ -158,7 +172,7 @@ html
 
                     #callout_wrapper
                       #base_callout.callout
-                          p Click on the map to find out about what we learnt!
+                        p Click on the map to find out about what we learnt!
                       #Uttarakhand_callout.callout
                         .callout-title
                           h3 Kiccha Sugar Company, Uttarakhand
