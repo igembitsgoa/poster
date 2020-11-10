@@ -132,10 +132,12 @@ html
                   #engineering_title
                     h1 Engineering
                   #engineering_content
-                    - var imgpath = require('./assets/img/Engineering--pFruB_poster.jpg')['default']
-                    +img("engineering--pFruB", imgpath, "DBTL procedure for the engineering of the pFruB-Cra Construct ", 50)
-                    - var imgpath = require('./assets/img/Engineering--KS_poster.jpg')['default']
-                    +img("engineering--KS", imgpath, "DBTL procedure for the engineering of the  Kill Switch Construct", 50)
+                    - var imgpath = require('./assets/img/Engineering--anti-invertase.svg')['default']
+                    +img("engineering--pFruB", imgpath, "DBTL procedure for the engineering of the pFruB-Cra Construct ", 100)
+                    - var imgpath = require('./assets/img/Engineering--Killswitch.svg')['default']
+                    +img("engineering--KS", imgpath, "DBTL procedure for the engineering of the  Kill Switch Construct", 100)
+                    - var imgpath = require('./assets/img/Engineering--inoculant.svg')['default']
+                    +img("engineering--inoculant", imgpath, "DBTL procedure for the Polymer Inoculant", 100)
             #safety_block.section.third
               img(src=require('./assets/img/Poster--Safety_red.svg')['default'])
               .info
@@ -151,7 +153,7 @@ html
                       li The second failsafe will be our atmosphere regulated kill switch construct (please see project design section). 
                       li The third failsafe is  the processing of sugarcane juice. Various steps are involved in turning the juice into consumable sugar including heating the juice to temperatures beyond 100°C which would kill the bacteria. 
                     h2 Industrial Safety 
-                    p We have tried inculcating biosafety at every design step. The inoculant ingredients are such that each of them are removed during the processing of sugarcane .Cane that is used for raw consumption is different from the cane being sent to the mill. We were also mindful of sterilization and biosafety regulation of our country, that would need to be followed for a successful industrial scaleup. For this we got help from Dr Rangarajan from our institute, and Andre Hermann from the policy committee respectively.
+                    p We have tried inculcating biosafety at every design step. The inoculant ingredients are such that each of them are removed during the processing of sugarcane .Cane that is used for raw consumption is different from the cane being sent to the mill. We were also mindful of sterilization and biosafety regulation of our country, that would need to be followed for a successful industrial scaleup. For this we got help from Dr Rangarajan from our institute, and Andre Hermann from the iGEM Policy Committee respectively.
 
                     br
                     .custom-row.justify-content-center
@@ -173,7 +175,7 @@ html
                     +img("human_practices--chart", imgpath, "Various stakeholders of the project", 100)
                     br
                     h2 Stakeholders
-                    p We interviewed farmers from different belts across the country to find out about the differences in harvesting and crushing practices. Apart from these, we found out some key aspects from each belt which have been illustrated in the diagram below.
+                    p We interviewed farmers from different belts across the country to find out about the differences in harvesting and crushing practices. Apart from these, we found out some key aspects from each belt, including the Mill Federation in UP and Kiccha Sugar Company in Uttrakhand, which have been illustrated in the diagram below.
 
                     #HP_map_wrapper
                       #human_practices_map
