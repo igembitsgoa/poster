@@ -3,6 +3,32 @@
 @import "_colors.scss";
 @import "_utils.scss";
 
+.poster_w.content {
+  position: relative;
+  img {
+    transition: all 0.3s ease;
+    z-index: 1;
+    position: relative;
+
+    &:hover {
+      opacity: 100%;
+      // transform: scale(1.0005);
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+      box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+      z-index: 5;
+    }
+  }
+}
+
+#poster_background {
+  position: absolute;
+  width: 99%;
+  height: 100%;
+  background-color: #25CED1;
+  z-index: -1;
+}
+
 .page_wrapper {
   p,
   strong,
@@ -50,16 +76,16 @@
   }
 }
 
-a.imgcaption{
+a.imgcaption {
   text-decoration: none;
 }
 
 .lightbox {
   display: block;
   p {
-      text-align: center;
-      color: grey;
-      margin-top: 0.4rem;
+    text-align: center;
+    color: grey;
+    margin-top: 0.4rem;
   }
 }
 
@@ -289,14 +315,15 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
       margin-top: 2rem;
       padding: 1rem;
       border-radius: 15px;
-      background-color: lighten(#D6FEFF, 5%);
-      border: 1px solid #009C9F;
+      background-color: lighten(#d6feff, 5%);
+      border: 1px solid #009c9f;
     }
 
     h3 {
       color: #007679;
       font-size: 1.2rem;
       margin: 0 0 0.5rem 0;
+      font-family: "Lato", sans-serif;
     }
 
     p {
@@ -306,19 +333,19 @@ $states: "Uttarakhand", "UttarPradesh", "Maharashtra", "TamilNadu", "Karnataka";
   }
 }
 
-
 @each $state in $states {
   #{"#" + $state + "_callout"} {
     display: none;
   }
 
-  body[data-state=#{$state}] {
+  body[data-state="#{$state}"] {
     #{"#" + $state + "_callout"} {
       display: block;
     }
+    #base_callout {
+      display: none;
+    }
   }
-
-  
 }
 
 #implementation_title {

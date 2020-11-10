@@ -5,6 +5,7 @@ html
     .page_wrapper
       .page_center
         .poster_w.content
+          #poster_background
           .row
             #title_block.section.full
               // 1200 x 200 pixels
@@ -24,7 +25,7 @@ html
           .row
             #inspiration_block.section.full
               // 1200 x 200 pixels
-              img(src='https://dummyimage.com/1200x200/000/fff&text=Inspiration')
+              img(src=require('./assets/img/Poster--Title_red.svg')['default'])
               .info
                 .title
                   #inspiration_title
@@ -69,7 +70,7 @@ html
           .row
             #modelling_block.section.third
               // 400 x 200 pixels
-              img(src=require('./assets/img/Poster--Modelling.svg')['default'])
+              img(src=require('./assets/img/Poster--Modelling_red.svg')['default'])
               .info
                 .title
                   #modelling_title
@@ -127,7 +128,7 @@ html
                 .title Idea 
                 .text  How are you going to solve the problem? Where did the idea come from? 
             #safety_block.section.third
-              img(src=require('./assets/img/Poster--Safety.svg')['default'])
+              img(src=require('./assets/img/Poster--Safety_red.svg')['default'])
               .info
                 .title 
                   #safety_title
@@ -156,11 +157,13 @@ html
                       include ./assets/img/Human_Practices--map.svg
 
                     #callout_wrapper
+                      #base_callout.callout
+                          p Click on the map to find out about what we learnt!
                       #Uttarakhand_callout.callout
                         .callout-title
                           h3 Kiccha Sugar Company, Uttarakhand
                         .callout-content
-                          p We gained knowledge on the Mill and Sugarcane farmer relationships and more importantly the impact of the pandemic on the sugar industry.
+                          p We gained knowledge about mill and sugarcane farmer relationships, and more importantly, the impact of the pandemic on the sugar industry.
                       #UttarPradesh_callout.callout
                         .callout-title
                           h3 Sugar Mill Federation, Uttar Pradesh
@@ -183,7 +186,7 @@ html
                           p There are innate inefficiencies in the system that can be tackled by our solution.
             #implementation_block.section.third
               // 400 x 200 pixels
-              img(src=require('./assets/img/Poster--Implementation.svg')['default'])
+              img(src=require('./assets/img/Poster--Implementation_red.svg')['default'])
               .info
                 .title
                   #implementation_title
@@ -394,7 +397,7 @@ html
           .row
             #acknowledgements_block.section.full
               // 400 x 200 pixels
-              img(src='https://dummyimage.com/1200x150/000/fff&text=Acknowledgements')
+              img(src=require('./assets/img/Poster--Title_red.svg')['default'])
               .info
                 .title  Problem 
                 .text
