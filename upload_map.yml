@@ -163,13 +163,17 @@ assets:
     link_URL: https://2020.igem.org/wiki/images/9/93/T--BITSPilani-Goa_India--Poster_img--Poster--Design_KS.gif
     md5: 1ad0caefcdacea080c6c510655b94534
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Poster--Design_KS.gif
+  assets/img/Poster--Design_KS_small.gif:
+    link_URL: https://2020.igem.org/wiki/images/4/4c/T--BITSPilani-Goa_India--Poster_img--Poster--Design_KS_small.gif
+    md5: d13adb8f6c94ff1d3df100753bf62098
+    upload_filename: T--BITSPilani-Goa_India--Poster_img--Poster--Design_KS_small.gif
   assets/img/Poster--Design_pFruB.gif:
     link_URL: https://2020.igem.org/wiki/images/f/f6/T--BITSPilani-Goa_India--Poster_img--Poster--Design_pFruB.gif
     md5: 735ba29d6498fffc2b36bc37c1946170
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Poster--Design_pFruB.gif
   assets/img/Poster--Design_pFruB_small.gif:
     link_URL: https://2020.igem.org/wiki/images/3/36/T--BITSPilani-Goa_India--Poster_img--Poster--Design_pFruB_small.gif
-    md5: 091c551d222531884149939719dd1927
+    md5: eb37c65fadb6b4f64a8ff4e207749fa4
     upload_filename: T--BITSPilani-Goa_India--Poster_img--Poster--Design_pFruB_small.gif
   assets/img/Poster--Education.svg:
     link_URL: https://2020.igem.org/wiki/images/c/ca/T--BITSPilani-Goa_India--Poster_img--Poster--Education.svg
@@ -258,7 +262,7 @@ css:
 html:
   Poster/index.html:
     link_URL: https://2020.igem.org/Team:BITSPilani-Goa_India/Poster
-    md5: 7fee9e69acfc4c5caa15acfeddd227a6
+    md5: 6dc61368503ed490b0ff81128ce0a2f4
 js:
   Poster.js:
     link_URL: https://2020.igem.org/Template:BITSPilani-Goa_India/PosterJS?action=raw&ctype=text/javascript
